@@ -1,0 +1,30 @@
+.header {
+    background-image: url("../image/image.png");
+    height: 300;    
+}
+
+.head_nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav_list {
+    display: inline-block;
+}
+
+.nav_item {
+    display: inline-block;
+    margin: 0;
+    justify-content: flex-start;
+}
+
+.nav_item_link {
+    color: aliceblue;
+}
+
+.login {
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border-radius: 50;
+    color: aliceblue;
+}

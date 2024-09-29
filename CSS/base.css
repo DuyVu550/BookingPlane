@@ -1,0 +1,23 @@
+html{
+    font-family: 'Courier New', sans-serif;
+    font-size: 120%;
+    box-sizing: border-box;
+}
+*{
+    box-sizing: inherit;
+}
+p{
+    font-size: 1.2rem;
+}
+.grid{
+    width: 2100px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+.grid_full-width{
+    width: 100;
+}
+.grid-row{
+    display: flex;
+    flex-wrap: wrap;
+}
