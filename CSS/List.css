@@ -1,0 +1,1386 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+.trang-t-v {
+    background-color: transparent;
+    display: grid;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .trang-t-v .slide-wrapper {
+    width: 1920px;
+    height: 2000px;
+  }
+  
+  .trang-t-v .slide {
+    height: 2778px;
+    background-color: #ffffff;
+  }
+  
+  .trang-t-v .overlap {
+    position: relative;
+    width: 1920px;
+    height: 2778px;
+  }
+  
+  .trang-t-v .image {
+    position: absolute;
+    width: 1920px;
+    height: 766px;
+    top: 0;
+    left: 0;
+  }
+  
+  .trang-t-v .rectangle {
+    position: absolute;
+    width: 1920px;
+    height: 1080px;
+    top: 0;
+    left: 0;
+    background-color: #000000;
+    opacity: 0.5;
+  }
+  
+  .trang-t-v .div {
+    position: absolute;
+    width: 1920px;
+    height: 2055px;
+    top: 723px;
+    left: 0;
+    background-color: #ffffff;
+    border-radius: 50px;
+    box-shadow: 0px 4px 30px #00000040;
+  }
+  
+  .trang-t-v .rectangle-2 {
+    position: absolute;
+    width: 41px;
+    height: 88px;
+    top: 912px;
+    left: 50px;
+    background-color: #d9d9d9;
+    border-radius: 80px;
+    transform: rotate(180deg);
+    box-shadow: inset 0px 4px 25px #00000040, 0px 4px 4px 1.5px #00000040;
+  }
+  
+  .trang-t-v .img {
+    width: 44px;
+    height: 44px;
+    top: 934px;
+    left: 47px;
+    position: absolute;
+    object-fit: cover;
+  }
+  
+  .trang-t-v .rectangle-3 {
+    position: absolute;
+    width: 1748px;
+    height: 290px;
+    top: 810px;
+    left: 86px;
+  }
+  
+  .trang-t-v .rectangle-4 {
+    position: absolute;
+    width: 297px;
+    height: 147px;
+    top: 877px;
+    left: 1160px;
+    background-color: #eff256;
+    border-radius: 50px;
+    box-shadow: 0px 1px 25px #000000;
+  }
+  
+  .trang-t-v .rectangle-5 {
+    position: absolute;
+    width: 297px;
+    height: 147px;
+    top: 877px;
+    left: 1509px;
+    background-color: #faf30eb0;
+    border-radius: 50px;
+    box-shadow: 0px 1px 25px #000000;
+  }
+
+  
+  .trang-t-v .rectangle-6 {
+    position: absolute;
+    width: 297px;
+    height: 147px;
+    top: 877px;
+    left: 462px;
+    background-color: #eef156;
+    border-radius: 50px;
+    box-shadow: 0px 1px 25px #000000;
+  }
+  
+  .trang-t-v .rectangle-7 {
+    position: absolute;
+    width: 297px;
+    height: 147px;
+    top: 877px;
+    left: 116px;
+    background-color: #eef156;
+    border-radius: 50px;
+    box-shadow: 0px 1px 25px #000000;
+  }
+  
+  .trang-t-v .rectangle-8 {
+    position: absolute;
+    width: 297px;
+    height: 147px;
+    top: 877px;
+    left: 811px;
+    background-color: #68bdda;
+    border-radius: 50px;
+    border: 1px solid;
+    border-color: #000000;
+    box-shadow: 0px 1px 30px 5px #257489;
+  }
+  
+  .trang-t-v .text-wrapper {
+    position: absolute;
+    width: 306px;
+    top: 928px;
+    left: 798px;
+    text-shadow: 0px 4px 4px #00000040;
+    -webkit-text-stroke: 1px #000000;
+    font-family: "Roboto-Regular", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 40px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .trang-t-v .p {
+    position: absolute;
+    width: 306px;
+    top: 928px;
+    left: 1156px;
+    text-shadow: 0px 4px 4px #00000040;
+    -webkit-text-stroke: 1px #000000;
+    font-family: "Roboto-Regular", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 40px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .trang-t-v .text-wrapper-2 {
+    position: absolute;
+    width: 306px;
+    top: 928px;
+    left: 1504px;
+    text-shadow: 0px 4px 4px #00000040;
+    -webkit-text-stroke: 1px #000000;
+    font-family: "Roboto-Regular", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 40px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .trang-t-v .text-wrapper-3 {
+    position: absolute;
+    width: 306px;
+    top: 928px;
+    left: 457px;
+    text-shadow: 0px 4px 4px #00000040;
+    -webkit-text-stroke: 1px #000000;
+    font-family: "Roboto-Regular", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 40px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .trang-t-v .text-wrapper-4 {
+    position: absolute;
+    width: 306px;
+    top: 928px;
+    left: 111px;
+    text-shadow: 0px 4px 4px #00000040;
+    -webkit-text-stroke: 1px #000000;
+    font-family: "Roboto-Regular", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 40px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .trang-t-v .ng-k-button {
+    position: absolute;
+    width: 199px;
+    height: 76px;
+    top: 12px;
+    left: 1621px;
+  }
+  
+  .trang-t-v .overlap-group {
+    position: relative;
+    width: 197px;
+    height: 76px;
+    background-color: #2c96a2;
+    border-radius: 25px;
+  }
+  
+  .trang-t-v .text-wrapper-5 {
+    top: 24px;
+    left: 52px;
+    position: absolute;
+    font-family: "Inter-Regular", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .trang-t-v .ng-nhp-button {
+    position: absolute;
+    width: 1315px;
+    height: 76px;
+    top: 12px;
+    left: 277px;
+  }
+  
+  .trang-t-v .div-wrapper {
+    position: absolute;
+    width: 197px;
+    height: 76px;
+    top: 0;
+    left: 1116px;
+    border-radius: 25px;
+    border: 1px solid;
+    border-color: #000000;
+  }
+  
+  .trang-t-v .text-wrapper-6 {
+    top: 23px;
+    left: 36px;
+    position: absolute;
+    font-family: "Inter-Regular", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .trang-t-v .navbar {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 41px;
+    position: absolute;
+    top: 24px;
+    left: 0;
+  }
+  
+  .trang-t-v .text-wrapper-7 {
+    position: relative;
+    width: fit-content;
+    margin-top: -1px;
+    font-family: "Inter-Regular", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .trang-t-v .text-wrapper-8 {
+    position: absolute;
+    top: 190px;
+    left: 793px;
+    font-family: "Kodchasan-Regular", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 64px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .trang-t-v .rectangle-9 {
+    position: absolute;
+    width: 266px;
+    height: 86px;
+    top: 604px;
+    left: 827px;
+    border-radius: 30px;
+    background: linear-gradient(180deg, rgb(238, 241, 86) 0%, rgb(253.51, 254.36, 210.06) 97.5%);
+  }
+  
+  .trang-t-v .text-wrapper-9 {
+    position: absolute;
+    top: 630px;
+    left: 901px;
+    font-family: "Kodchasan-Bold", Helvetica;
+    font-weight: 700;
+    color: #5720fd;
+    font-size: 24px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .trang-t-v .rectangle-10 {
+    position: absolute;
+    width: 1334px;
+    height: 282px;
+    top: 288px;
+    left: 287px;
+    background-color: #ffffff;
+    border-radius: 50px;
+    box-shadow: 0px 4px 100px #000000;
+  }
+  
+  .trang-t-v .line {
+    position: absolute;
+    width: 1255px;
+    height: 22px;
+    top: 435px;
+    left: 339px;
+  }
+  
+  .trang-t-v .text-wrapper-10 {
+    position: absolute;
+    width: 230px;
+    top: 493px;
+    left: 1322px;
+    font-family: "Kodchasan-Bold", Helvetica;
+    font-weight: 700;
+    color: #000000;
+    font-size: 30px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .trang-t-v .text-wrapper-11 {
+    position: absolute;
+    top: 393px;
+    left: 856px;
+    text-shadow: 0px 4px 4px #00000040;
+    font-family: "Kodchasan-Regular", Helvetica;
+    font-weight: 400;
+    color: #753cc0;
+    font-size: 32px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .trang-t-v .text-wrapper-12 {
+    position: absolute;
+    top: 441px;
+    left: 1334px;
+    font-family: "Kodchasan-Bold", Helvetica;
+    font-weight: 700;
+    color: #000000;
+    font-size: 30px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .trang-t-v .text-wrapper-13 {
+    left: 736px;
+    position: absolute;
+    top: 441px;
+    font-family: "Kodchasan-Bold", Helvetica;
+    font-weight: 700;
+    color: #000000;
+    font-size: 30px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .trang-t-v .text-wrapper-14 {
+    position: absolute;
+    width: 213px;
+    top: 493px;
+    left: 706px;
+    font-family: "Kodchasan-Bold", Helvetica;
+    font-weight: 700;
+    color: #000000;
+    font-size: 30px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .trang-t-v .text-wrapper-15 {
+    left: 1056px;
+    position: absolute;
+    top: 441px;
+    font-family: "Kodchasan-Bold", Helvetica;
+    font-weight: 700;
+    color: #000000;
+    font-size: 30px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .trang-t-v .text-wrapper-16 {
+    position: absolute;
+    top: 441px;
+    left: 395px;
+    font-family: "Kodchasan-Bold", Helvetica;
+    font-weight: 700;
+    color: #000000;
+    font-size: 30px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .trang-t-v .text-wrapper-17 {
+    position: absolute;
+    width: 214px;
+    top: 493px;
+    left: 1029px;
+    font-family: "Kodchasan-Bold", Helvetica;
+    font-weight: 700;
+    color: #000000;
+    font-size: 30px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .trang-t-v .line-2 {
+    position: absolute;
+    width: 1920px;
+    height: 1px;
+    top: 105px;
+    left: 0;
+    object-fit: cover;
+  }
+  
+  .trang-t-v .TP-h-ch-minh {
+    position: absolute;
+    top: 327px;
+    left: 395px;
+    font-family: "Kodchasan-Regular", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 42px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .trang-t-v .text-wrapper-18 {
+    position: absolute;
+    top: 329px;
+    left: 880px;
+    font-family: "Kodchasan-Bold", Helvetica;
+    font-weight: 700;
+    color: #753cc0;
+    font-size: 32px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .trang-t-v .text-wrapper-19 {
+    position: absolute;
+    top: 355px;
+    left: 1341px;
+    font-family: "Kodchasan-Regular", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 42px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .trang-t-v .image-2 {
+    width: 40px;
+    height: 40px;
+    top: 335px;
+    left: 676px;
+    position: absolute;
+    object-fit: cover;
+  }
+  
+  .trang-t-v .image-3 {
+    width: 40px;
+    height: 40px;
+    top: 394px;
+    left: 1282px;
+    position: absolute;
+    object-fit: cover;
+  }
+  
+  .trang-t-v .line-3 {
+    position: absolute;
+    width: 643px;
+    height: 2px;
+    top: 376px;
+    left: 679px;
+  }
+  
+  .trang-t-v .line-4 {
+    position: absolute;
+    width: 643px;
+    height: 2px;
+    top: 388px;
+    left: 679px;
+  }
+  
+  .trang-t-v .group {
+    position: absolute;
+    width: 45px;
+    height: 39px;
+    top: 494px;
+    left: 465px;
+  }
+  
+  .trang-t-v .text-wrapper-20 {
+    position: absolute;
+    width: 12px;
+    top: 0;
+    left: 0;
+    font-family: "Kodchasan-Bold", Helvetica;
+    font-weight: 700;
+    color: #000000;
+    font-size: 30px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .trang-t-v .image-4 {
+    width: 25px;
+    height: 25px;
+    top: 8px;
+    left: 18px;
+    position: absolute;
+    object-fit: cover;
+  }
+  
+  .trang-t-v .rectangle-11 {
+    position: absolute;
+    width: 41px;
+    height: 88px;
+    top: 912px;
+    left: 1831px;
+    background-color: #d9d9d9;
+    border-radius: 80px;
+    box-shadow: inset 0px 4px 25px #00000040, 0px 4px 4px 1.5px #00000040;
+  }
+  
+  .trang-t-v .image-5 {
+    width: 44px;
+    height: 44px;
+    top: 934px;
+    left: 1831px;
+    position: absolute;
+    object-fit: cover;
+  }
+  
+  .trang-t-v .rectangle-12 {
+    top: 1187px;
+    background-color: #053947;
+    position: absolute;
+    width: 1740px;
+    height: 282px;
+    left: 91px;
+    border-radius: 50px;
+    box-shadow: 0px 4px 25px #000000;
+  }
+  
+  .trang-t-v .rectangle-13 {
+    position: absolute;
+    width: 1310px;
+    height: 282px;
+    top: 1187px;
+    left: 90px;
+    background-color: #5dbdd6;
+    border-radius: 50px;
+  }
+  
+  .trang-t-v .text-wrapper-21 {
+    top: 1298px;
+    position: absolute;
+    left: 1456px;
+    text-shadow: 0px 4px 4px #00000040;
+    -webkit-text-stroke: 1px #262323;
+    font-family: "Kodchasan-Bold", Helvetica;
+    font-weight: 700;
+    color: #ffffff;
+    font-size: 42px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .trang-t-v .text-wrapper-22 {
+    position: absolute;
+    top: 1924px;
+    left: 458px;
+    font-family: "Kodchasan-Regular", Helvetica;
+    font-weight: 400;
+    color: #531ff0;
+    font-size: 32px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .trang-t-v .text-wrapper-23 {
+    position: absolute;
+    top: 1862px;
+    left: 854px;
+    text-shadow: 0px 4px 4px #00000040;
+    font-family: "Kodchasan-Bold", Helvetica;
+    font-weight: 700;
+    color: #3708c2;
+    font-size: 32px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .trang-t-v .rectangle-14 {
+    top: 1533px;
+    background-color: #b9a637f5;
+    position: absolute;
+    width: 1740px;
+    height: 282px;
+    left: 91px;
+    border-radius: 50px;
+    box-shadow: 0px 4px 25px #000000;
+  }
+  
+  .trang-t-v .rectangle-15 {
+    position: absolute;
+    width: 1740px;
+    height: 282px;
+    top: 2041px;
+    left: 91px;
+    background-color: #053947;
+    border-radius: 50px;
+    box-shadow: 0px 4px 25px #000000;
+  }
+  
+  .trang-t-v .rectangle-16 {
+    position: absolute;
+    width: 1740px;
+    height: 282px;
+    top: 2394px;
+    left: 91px;
+    background-color: #053947;
+    border-radius: 50px;
+    box-shadow: 0px 4px 25px #000000;
+  }
+  
+  .trang-t-v .rectangle-17 {
+    position: absolute;
+    width: 1310px;
+    height: 282px;
+    top: 1533px;
+    left: 90px;
+    background-color: #5dbdd6;
+    border-radius: 50px;
+  }
+  
+  .trang-t-v .rectangle-18 {
+    position: absolute;
+    width: 1310px;
+    height: 282px;
+    top: 2041px;
+    left: 90px;
+    background-color: #5dbdd6;
+    border-radius: 50px;
+  }
+  
+  .trang-t-v .rectangle-19 {
+    position: absolute;
+    width: 1310px;
+    height: 282px;
+    top: 2394px;
+    left: 90px;
+    background-color: #5dbdd6;
+    border-radius: 50px;
+  }
+  
+  .trang-t-v .text-wrapper-24 {
+    position: absolute;
+    top: 1634px;
+    left: 1456px;
+    text-shadow: 0px 4px 4px #00000040;
+    -webkit-text-stroke: 1px #f2b5b5;
+    font-family: "Kodchasan-Bold", Helvetica;
+    font-weight: 700;
+    color: #ffffff;
+    font-size: 42px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .trang-t-v .text-wrapper-25 {
+    top: 1576px;
+    -webkit-text-stroke: 1px #f2b5b5;
+    position: absolute;
+    left: 1456px;
+    text-shadow: 0px 4px 4px #00000040;
+    font-family: "Kodchasan-Bold", Helvetica;
+    font-weight: 700;
+    color: #ffffff;
+    font-size: 42px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .trang-t-v .text-wrapper-26 {
+    position: absolute;
+    top: 1230px;
+    left: 1456px;
+    text-shadow: 0px 4px 4px #00000040;
+    -webkit-text-stroke: 1px #262323;
+    font-family: "Kodchasan-Bold", Helvetica;
+    font-weight: 700;
+    color: #ffffff;
+    font-size: 42px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .trang-t-v .text-wrapper-27 {
+    top: 2084px;
+    -webkit-text-stroke: 1px #262323;
+    position: absolute;
+    left: 1456px;
+    text-shadow: 0px 4px 4px #00000040;
+    font-family: "Kodchasan-Bold", Helvetica;
+    font-weight: 700;
+    color: #ffffff;
+    font-size: 42px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .trang-t-v .text-wrapper-28 {
+    top: 2437px;
+    -webkit-text-stroke: 1px #262323;
+    position: absolute;
+    left: 1456px;
+    text-shadow: 0px 4px 4px #00000040;
+    font-family: "Kodchasan-Bold", Helvetica;
+    font-weight: 700;
+    color: #ffffff;
+    font-size: 42px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .trang-t-v .text-wrapper-29 {
+    top: 2152px;
+    position: absolute;
+    left: 1456px;
+    text-shadow: 0px 4px 4px #00000040;
+    -webkit-text-stroke: 1px #262323;
+    font-family: "Kodchasan-Bold", Helvetica;
+    font-weight: 700;
+    color: #ffffff;
+    font-size: 42px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .trang-t-v .text-wrapper-30 {
+    top: 2505px;
+    position: absolute;
+    left: 1456px;
+    text-shadow: 0px 4px 4px #00000040;
+    -webkit-text-stroke: 1px #262323;
+    font-family: "Kodchasan-Bold", Helvetica;
+    font-weight: 700;
+    color: #ffffff;
+    font-size: 42px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .trang-t-v .text-wrapper-31 {
+    position: absolute;
+    top: 1231px;
+    left: 152px;
+    text-shadow: 0px 4px 4px #00000040;
+    font-family: "Kodchasan-Bold", Helvetica;
+    font-weight: 700;
+    color: #000000;
+    font-size: 42px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .trang-t-v .text-wrapper-32 {
+    top: 1577px;
+    position: absolute;
+    left: 152px;
+    text-shadow: 0px 4px 4px #00000040;
+    font-family: "Kodchasan-Bold", Helvetica;
+    font-weight: 700;
+    color: #000000;
+    font-size: 42px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .trang-t-v .text-wrapper-33 {
+    top: 2085px;
+    position: absolute;
+    left: 152px;
+    text-shadow: 0px 4px 4px #00000040;
+    font-family: "Kodchasan-Bold", Helvetica;
+    font-weight: 700;
+    color: #000000;
+    font-size: 42px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .trang-t-v .text-wrapper-34 {
+    top: 2438px;
+    position: absolute;
+    left: 152px;
+    text-shadow: 0px 4px 4px #00000040;
+    font-family: "Kodchasan-Bold", Helvetica;
+    font-weight: 700;
+    color: #000000;
+    font-size: 42px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .trang-t-v .text-wrapper-35 {
+    position: absolute;
+    top: 1231px;
+    left: 792px;
+    text-shadow: 0px 4px 4px #00000040;
+    font-family: "Kodchasan-Bold", Helvetica;
+    font-weight: 700;
+    color: #000000;
+    font-size: 42px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .trang-t-v .lc {
+    position: absolute;
+    width: 378px;
+    height: 215px;
+    top: 545px;
+    left: 87px;
+  }
+
+  .sort{
+      position: absolute;
+      width: 287px;
+      height: 67px;
+      top: 600px;
+      left: 87px;
+      border-radius: 10px;
+      background: linear-gradient(180deg, rgb(144.49, 109.55, 53.34) 0%, rgb(246.49, 186.88, 90.99) 100%);
+  }
+  .label {
+    position:relative;
+    width: 206px;
+    height: 38px;
+  }
+  .roboto-regular {
+    font-family: "Roboto", system-ui;
+    font-weight: 400;
+    font-style: normal;
+  }
+  .label .text-wrapper{
+    position:absolute;
+    top: 0;
+    left: -10px;
+    text-shadow: 0px 4px 20px #ffffff40;
+    background: linear-gradient(90deg, #EADCDC 0%, #F2E9E9 9.5%, #FFF 52.5%, #252525 52.51%, #252525 61.51%, #000 100%);
+    -webkit-background-clip: text !important;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    color:transparent;
+    font-size: 32px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  
+  .trang-t-v .text-wrapper-36 {
+    top: 1577px;
+    position: absolute;
+    left: 792px;
+    text-shadow: 0px 4px 4px #00000040;
+    font-family: "Kodchasan-Bold", Helvetica;
+    font-weight: 700;
+    color: #000000;
+    font-size: 42px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .trang-t-v .text-wrapper-37 {
+    top: 2085px;
+    position: absolute;
+    left: 792px;
+    text-shadow: 0px 4px 4px #00000040;
+    font-family: "Kodchasan-Bold", Helvetica;
+    font-weight: 700;
+    color: #000000;
+    font-size: 42px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .trang-t-v .text-wrapper-38 {
+    top: 2438px;
+    position: absolute;
+    left: 792px;
+    text-shadow: 0px 4px 4px #00000040;
+    font-family: "Kodchasan-Bold", Helvetica;
+    font-weight: 700;
+    color: #000000;
+    font-size: 42px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .trang-t-v .text-wrapper-39 {
+    position: absolute;
+    top: 1325px;
+    left: 255px;
+    font-family: "Kodchasan-Regular", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 42px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .trang-t-v .text-wrapper-40 {
+    top: 1396px;
+    left: 378px;
+    position: absolute;
+    font-family: "Kodchasan-Regular", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 42px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .trang-t-v .text-wrapper-41 {
+    top: 1742px;
+    left: 378px;
+    position: absolute;
+    font-family: "Kodchasan-Regular", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 42px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .trang-t-v .text-wrapper-42 {
+    top: 2253px;
+    left: 378px;
+    position: absolute;
+    font-family: "Kodchasan-Regular", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 42px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .trang-t-v .text-wrapper-43 {
+    top: 2609px;
+    left: 378px;
+    position: absolute;
+    font-family: "Kodchasan-Regular", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 42px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .trang-t-v .text-wrapper-44 {
+    top: 1671px;
+    position: absolute;
+    left: 255px;
+    font-family: "Kodchasan-Regular", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 42px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .trang-t-v .text-wrapper-45 {
+    top: 2179px;
+    position: absolute;
+    left: 255px;
+    font-family: "Kodchasan-Regular", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 42px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .trang-t-v .text-wrapper-46 {
+    top: 2532px;
+    position: absolute;
+    left: 255px;
+    font-family: "Kodchasan-Regular", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 42px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .trang-t-v .text-wrapper-47 {
+    position: absolute;
+    top: 1325px;
+    left: 895px;
+    font-family: "Kodchasan-Regular", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 42px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .trang-t-v .text-wrapper-48 {
+    top: 1396px;
+    left: 1019px;
+    position: absolute;
+    font-family: "Kodchasan-Regular", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 42px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .trang-t-v .text-wrapper-49 {
+    top: 1742px;
+    left: 1019px;
+    position: absolute;
+    font-family: "Kodchasan-Regular", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 42px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .trang-t-v .text-wrapper-50 {
+    top: 2253px;
+    left: 1019px;
+    position: absolute;
+    font-family: "Kodchasan-Regular", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 42px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .trang-t-v .text-wrapper-51 {
+    top: 2609px;
+    left: 1019px;
+    position: absolute;
+    font-family: "Kodchasan-Regular", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 42px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .trang-t-v .text-wrapper-52 {
+    top: 1671px;
+    position: absolute;
+    left: 895px;
+    font-family: "Kodchasan-Regular", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 42px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .trang-t-v .text-wrapper-53 {
+    top: 2179px;
+    position: absolute;
+    left: 895px;
+    font-family: "Kodchasan-Regular", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 42px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .trang-t-v .text-wrapper-54 {
+    top: 2532px;
+    position: absolute;
+    left: 895px;
+    font-family: "Kodchasan-Regular", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 42px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .trang-t-v .line-5 {
+    position: absolute;
+    width: 1322px;
+    height: 37px;
+    top: 1293px;
+    left: 84px;
+  }
+  
+  .trang-t-v .line-6 {
+    position: absolute;
+    width: 1322px;
+    height: 37px;
+    top: 1639px;
+    left: 84px;
+  }
+  
+  .trang-t-v .line-7 {
+    position: absolute;
+    width: 1322px;
+    height: 37px;
+    top: 2147px;
+    left: 84px;
+  }
+  
+  .trang-t-v .line-8 {
+    position: absolute;
+    width: 1322px;
+    height: 37px;
+    top: 2500px;
+    left: 84px;
+  }
+  
+  .trang-t-v .rectangle-20 {
+    position: absolute;
+    width: 316px;
+    height: 86px;
+    top: 1354px;
+    left: 1457px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 4px #00000040;
+    background: linear-gradient(180deg, rgb(247.78, 249.26, 172.61) 0%, rgb(253.51, 254.36, 210.06) 97.5%);
+  }
+  
+  .trang-t-v .rectangle-21 {
+    position: absolute;
+    width: 316px;
+    height: 86px;
+    top: 1715px;
+    left: 1463px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 4px #00000040;
+    background: linear-gradient(180deg, rgb(247.78, 249.26, 172.61) 0%, rgb(253.51, 254.36, 210.06) 97.5%);
+  }
+  
+  .trang-t-v .rectangle-22 {
+    position: absolute;
+    width: 316px;
+    height: 86px;
+    top: 2222px;
+    left: 1463px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 4px #00000040;
+    background: linear-gradient(180deg, rgb(247.78, 249.26, 172.61) 0%, rgb(253.51, 254.36, 210.06) 97.5%);
+  }
+  
+  .trang-t-v .rectangle-23 {
+    position: absolute;
+    width: 316px;
+    height: 86px;
+    top: 2576px;
+    left: 1463px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 4px #00000040;
+    background: linear-gradient(180deg, rgb(247.78, 249.26, 172.61) 0%, rgb(253.51, 254.36, 210.06) 97.5%);
+  }
+  
+  .trang-t-v .text-wrapper-55 {
+    position: absolute;
+    width: 174px;
+    top: 1370px;
+    left: 1531px;
+    text-shadow: 0px 4px 4px #00000040;
+    font-family: "Kodchasan-Bold", Helvetica;
+    font-weight: 700;
+    color: #5720fd;
+    font-size: 40px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .trang-t-v .text-wrapper-56 {
+    top: 1731px;
+    position: absolute;
+    width: 174px;
+    left: 1537px;
+    text-shadow: 0px 4px 4px #00000040;
+    font-family: "Kodchasan-Bold", Helvetica;
+    font-weight: 700;
+    color: #5720fd;
+    font-size: 40px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .trang-t-v .text-wrapper-57 {
+    top: 2238px;
+    position: absolute;
+    width: 174px;
+    left: 1537px;
+    text-shadow: 0px 4px 4px #00000040;
+    font-family: "Kodchasan-Bold", Helvetica;
+    font-weight: 700;
+    color: #5720fd;
+    font-size: 40px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .trang-t-v .text-wrapper-58 {
+    top: 2592px;
+    position: absolute;
+    width: 174px;
+    left: 1537px;
+    text-shadow: 0px 4px 4px #00000040;
+    font-family: "Kodchasan-Bold", Helvetica;
+    font-weight: 700;
+    color: #5720fd;
+    font-size: 40px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .trang-t-v .access-time {
+    position: absolute;
+    width: 44px;
+    height: 44px;
+    top: 1746px;
+    left: 964px;
+  }
+  
+  .trang-t-v .access-time-2 {
+    top: 2257px;
+    left: 964px;
+    position: absolute;
+    width: 44px;
+    height: 44px;
+  }
+  
+  .trang-t-v .access-time-3 {
+    top: 2613px;
+    left: 964px;
+    position: absolute;
+    width: 44px;
+    height: 44px;
+  }
+  
+  .trang-t-v .access-time-4 {
+    top: 1403px;
+    left: 964px;
+    position: absolute;
+    width: 44px;
+    height: 44px;
+  }
+  
+  .trang-t-v .access-time-5 {
+    top: 1746px;
+    left: 323px;
+    position: absolute;
+    width: 44px;
+    height: 44px;
+  }
+  
+  .trang-t-v .access-time-6 {
+    top: 2257px;
+    left: 323px;
+    position: absolute;
+    width: 44px;
+    height: 44px;
+  }
+  
+  .trang-t-v .access-time-7 {
+    top: 2613px;
+    left: 323px;
+    position: absolute;
+    width: 44px;
+    height: 44px;
+  }
+  
+  .trang-t-v .access-time-8 {
+    top: 1403px;
+    left: 323px;
+    position: absolute;
+    width: 44px;
+    height: 44px;
+  }
+  
