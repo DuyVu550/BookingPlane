@@ -1,17 +1,776 @@
-.admin_trang_ch{
+.admin-trang-ch {
     background-color: #ffffff;
     display: flex;
     flex-direction: row;
     justify-content: center;
     width: 100%;
-}
-.admin_trang_ch .div{
+  }
+  
+  .admin-trang-ch .div {
     background-color: #ffffff;
     overflow: hidden;
     width: 1302px;
-    height: 85px;
+    height: 855px;
     position: relative;
-}
-.admin_trang_ch .overlap{
-    
-}
+  }
+  
+  .admin-trang-ch .overlap {
+    position: absolute;
+    width: 1210px;
+    height: 855px;
+    top: 0;
+    left: 234px;
+  }
+  
+  .admin-trang-ch .rectangle {
+    position: absolute;
+    width: 1068px;
+    height: 723px;
+    top: 132px;
+    left: 0;
+  }
+  
+  .admin-trang-ch .rectangle-2 {
+    position: absolute;
+    width: 1210px;
+    height: 134px;
+    top: 0;
+    left: 0;
+    background-color: #e2d76e;
+  }
+  
+  .admin-trang-ch .profile-avtar {
+    position: absolute;
+    width: 97px;
+    height: 97px;
+    top: 19px;
+    left: 935px;
+    object-fit: cover;
+  }
+  
+  .admin-trang-ch .sales-info-search {
+    position: absolute;
+    width: 233px;
+    height: 36px;
+    top: 64px;
+    left: 40px;
+  }
+  
+  .admin-trang-ch .text-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-family: "Poppins-Medium", Helvetica;
+    font-weight: 500;
+    color: #000000;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .admin-trang-ch .group {
+    position: absolute;
+    width: 291px;
+    height: 151px;
+    top: 607px;
+    left: 23px;
+  }
+  
+  .admin-trang-ch .overlap-group {
+    position: relative;
+    height: 151px;
+  }
+  
+  .admin-trang-ch .rectangle-3 {
+    position: absolute;
+    width: 289px;
+    height: 151px;
+    top: 0;
+    left: 2px;
+    background-color: #ffffff;
+    border-radius: 10px;
+  }
+  
+  .admin-trang-ch .overlap-wrapper {
+    position: absolute;
+    width: 290px;
+    height: 101px;
+    top: 26px;
+    left: 0;
+  }
+  
+  .admin-trang-ch .overlap-2 {
+    position: relative;
+    height: 101px;
+  }
+  
+  .admin-trang-ch .text-wrapper-2 {
+    position: absolute;
+    width: 132px;
+    top: 63px;
+    left: 118px;
+    font-family: "Kodchasan-Medium", Helvetica;
+    font-weight: 500;
+    color: #000000;
+    font-size: 32px;
+    letter-spacing: 0.16px;
+    line-height: 24px;
+  }
+  
+  .admin-trang-ch .overlap-group-wrapper {
+    position: absolute;
+    width: 290px;
+    height: 85px;
+    top: 0;
+    left: 0;
+  }
+  
+  .admin-trang-ch .overlap-group-2 {
+    position: relative;
+    width: 288px;
+    height: 85px;
+  }
+  
+  .admin-trang-ch .text-wrapper-3 {
+    position: absolute;
+    width: 227px;
+    top: 19px;
+    left: 61px;
+    font-family: "Kodchasan-Medium", Helvetica;
+    font-weight: 500;
+    color: #000000;
+    font-size: 20px;
+    letter-spacing: 0.1px;
+    line-height: 24px;
+  }
+  
+  .admin-trang-ch .img {
+    position: absolute;
+    width: 53px;
+    height: 55px;
+    top: 0;
+    left: 0;
+  }
+  
+  .admin-trang-ch .div-wrapper {
+    position: absolute;
+    width: 292px;
+    height: 151px;
+    top: 607px;
+    left: 758px;
+  }
+  
+  .admin-trang-ch .overlap-3 {
+    position: relative;
+    width: 294px;
+    height: 151px;
+  }
+  
+  .admin-trang-ch .rectangle-4 {
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 287px;
+    height: 151px;
+    background-color: #ffffff;
+    border-radius: 10px;
+  }
+  
+  .admin-trang-ch .group-2 {
+    position: absolute;
+    width: 227px;
+    height: 82px;
+    top: 45px;
+    left: 67px;
+  }
+  
+  .admin-trang-ch .text-wrapper-4 {
+    top: 44px;
+    left: 48px;
+    position: absolute;
+    width: 131px;
+    font-family: "Kodchasan-Medium", Helvetica;
+    font-weight: 500;
+    color: #000000;
+    font-size: 32px;
+    letter-spacing: 0.16px;
+    line-height: 24px;
+  }
+  
+  .admin-trang-ch .group-3 {
+    width: 227px;
+    height: 38px;
+    position: absolute;
+    top: -15px;
+    left: 0;
+  }
+  
+  .admin-trang-ch .p {
+    position: absolute;
+    width: 225px;
+    top: 0;
+    left: 0;
+    font-family: "Kodchasan-Medium", Helvetica;
+    font-weight: 500;
+    color: #000000;
+    font-size: 20px;
+    letter-spacing: 0.1px;
+    line-height: 24px;
+  }
+  
+  .admin-trang-ch .group-4 {
+    position: absolute;
+    width: 289px;
+    height: 151px;
+    top: 359px;
+    left: 25px;
+  }
+  
+  .admin-trang-ch .rectangle-5 {
+    top: 0;
+    left: 2px;
+    position: absolute;
+    width: 287px;
+    height: 151px;
+    background-color: #ffffff;
+    border-radius: 10px;
+  }
+  
+  .admin-trang-ch .group-5 {
+    position: absolute;
+    width: 288px;
+    height: 101px;
+    top: 26px;
+    left: 0;
+  }
+  
+  .admin-trang-ch .text-wrapper-5 {
+    top: 63px;
+    left: 117px;
+    position: absolute;
+    width: 131px;
+    font-family: "Kodchasan-Medium", Helvetica;
+    font-weight: 500;
+    color: #000000;
+    font-size: 32px;
+    letter-spacing: 0.16px;
+    line-height: 24px;
+  }
+  
+  .admin-trang-ch .group-6 {
+    width: 288px;
+    height: 85px;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  .admin-trang-ch .overlap-group-3 {
+    position: relative;
+    width: 286px;
+    height: 85px;
+  }
+  
+  .admin-trang-ch .text-wrapper-6 {
+    position: absolute;
+    width: 225px;
+    top: 19px;
+    left: 61px;
+    font-family: "Kodchasan-Medium", Helvetica;
+    font-weight: 500;
+    color: #000000;
+    font-size: 20px;
+    letter-spacing: 0.1px;
+    line-height: 24px;
+  }
+  
+  .admin-trang-ch .group-7 {
+    position: absolute;
+    width: 82px;
+    height: 85px;
+    top: 0;
+    left: 0;
+  }
+  
+  .admin-trang-ch .group-wrapper {
+    position: absolute;
+    width: 287px;
+    height: 151px;
+    top: 359px;
+    left: 384px;
+    background-color: #ffffff;
+    border-radius: 10px;
+  }
+  
+  .admin-trang-ch .group-8 {
+    position: relative;
+    width: 283px;
+    height: 98px;
+    top: 29px;
+    left: 3px;
+  }
+  
+  .admin-trang-ch .text-wrapper-7 {
+    width: 131px;
+    top: 60px;
+    left: 72px;
+    position: absolute;
+    font-family: "Kodchasan-Medium", Helvetica;
+    font-weight: 500;
+    color: #000000;
+    font-size: 32px;
+    letter-spacing: 0.16px;
+    line-height: 24px;
+  }
+  
+  .admin-trang-ch .group-9 {
+    width: 283px;
+    height: 54px;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  .admin-trang-ch .text-wrapper-8 {
+    position: absolute;
+    width: 225px;
+    top: 16px;
+    left: 56px;
+    font-family: "Kodchasan-Medium", Helvetica;
+    font-weight: 500;
+    color: #000000;
+    font-size: 20px;
+    letter-spacing: 0.1px;
+    line-height: 24px;
+  }
+  
+  .admin-trang-ch .img-2 {
+    position: absolute;
+    width: 26px;
+    height: 24px;
+    top: 0;
+    left: 0;
+  }
+  
+  .admin-trang-ch .group-10 {
+    position: absolute;
+    width: 444px;
+    height: 151px;
+    top: 156px;
+    left: 314px;
+    background-color: #ffffff;
+    border-radius: 10px;
+  }
+  
+  .admin-trang-ch .group-11 {
+    position: relative;
+    width: 287px;
+    height: 98px;
+    top: 29px;
+    left: 73px;
+  }
+  
+  .admin-trang-ch .text-wrapper-9 {
+    position: absolute;
+    width: 278px;
+    top: 60px;
+    left: 7px;
+    font-family: "Kodchasan-Medium", Helvetica;
+    font-weight: 500;
+    color: #000000;
+    font-size: 32px;
+    letter-spacing: 0.16px;
+    line-height: 24px;
+  }
+  
+  .admin-trang-ch .group-12 {
+    width: 287px;
+    height: 54px;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  .admin-trang-ch .text-wrapper-10 {
+    position: absolute;
+    width: 228px;
+    top: 16px;
+    left: 57px;
+    font-family: "Kodchasan-Medium", Helvetica;
+    font-weight: 500;
+    color: #000000;
+    font-size: 20px;
+    letter-spacing: 0.1px;
+    line-height: 24px;
+  }
+  
+  .admin-trang-ch .group-13 {
+    position: absolute;
+    width: 284px;
+    height: 151px;
+    top: 607px;
+    left: 384px;
+    background-color: #ffffff;
+    border-radius: 10px;
+  }
+  
+  .admin-trang-ch .group-14 {
+    position: relative;
+    width: 280px;
+    height: 98px;
+    top: 29px;
+    left: 3px;
+  }
+  
+  .admin-trang-ch .text-wrapper-11 {
+    width: 129px;
+    top: 60px;
+    left: 87px;
+    position: absolute;
+    font-family: "Kodchasan-Medium", Helvetica;
+    font-weight: 500;
+    color: #000000;
+    font-size: 32px;
+    letter-spacing: 0.16px;
+    line-height: 24px;
+  }
+  
+  .admin-trang-ch .group-15 {
+    width: 280px;
+    height: 54px;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  .admin-trang-ch .text-wrapper-12 {
+    position: absolute;
+    width: 223px;
+    top: 16px;
+    left: 55px;
+    font-family: "Kodchasan-Medium", Helvetica;
+    font-weight: 500;
+    color: #000000;
+    font-size: 20px;
+    letter-spacing: 0.1px;
+    line-height: 24px;
+  }
+  
+  .admin-trang-ch .person {
+    position: absolute;
+    width: 55px;
+    height: 54px;
+    top: 0;
+    left: 0;
+  }
+  
+  .admin-trang-ch .rectangle-6 {
+    top: 359px;
+    left: 758px;
+    position: absolute;
+    width: 287px;
+    height: 151px;
+    background-color: #ffffff;
+    border-radius: 10px;
+  }
+  
+  .admin-trang-ch .group-16 {
+    position: absolute;
+    width: 283px;
+    height: 302px;
+    top: 388px;
+    left: 764px;
+  }
+  
+  .admin-trang-ch .group-17 {
+    width: 285px;
+    height: 302px;
+  }
+  
+  .admin-trang-ch .overlap-group-4 {
+    position: relative;
+    height: 302px;
+  }
+  
+  .admin-trang-ch .text-wrapper-13 {
+    width: 131px;
+    top: 59px;
+    left: 69px;
+    position: absolute;
+    font-family: "Kodchasan-Medium", Helvetica;
+    font-weight: 500;
+    color: #000000;
+    font-size: 32px;
+    letter-spacing: 0.16px;
+    line-height: 24px;
+  }
+  
+  .admin-trang-ch .group-18 {
+    width: 285px;
+    height: 302px;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  .admin-trang-ch .text-wrapper-14 {
+    position: absolute;
+    width: 225px;
+    top: 16px;
+    left: 58px;
+    font-family: "Kodchasan-Medium", Helvetica;
+    font-weight: 500;
+    color: #000000;
+    font-size: 20px;
+    letter-spacing: 0.1px;
+    line-height: 24px;
+  }
+  
+  .admin-trang-ch .picture-in-picture {
+    position: absolute;
+    width: 56px;
+    height: 54px;
+    top: -5px;
+    left: -5px;
+
+  }
+  
+  .admin-trang-ch .picture-in-picture-2 {
+    width: 56px;
+    height: 54px;
+    top: 265px;
+    position: absolute;
+    left: -5px;
+  }
+  
+  .admin-trang-ch .overlap-4 {
+    position: absolute;
+    width: 230px;
+    height: 1149px;
+    top: 0;
+    left: 4px;
+    background-color: #ffffff;
+  }
+  
+  .admin-trang-ch .active {
+    position: absolute;
+    width: 3px;
+    height: 39px;
+    top: 149px;
+    left: 0;
+    background-color: #0b63f8;
+  }
+  
+  .admin-trang-ch .sidebar {
+    display: flex;
+    flex-direction: column;
+    width: 160px;
+    height: 414px;
+    align-items: flex-start;
+    gap: 525px;
+    padding: 0px 0px 30px;
+    position: absolute;
+    top: 156px;
+    left: 41px;
+  }
+  
+  .admin-trang-ch .frame {
+    position: relative;
+    width: 140px;
+    height: 438.15px;
+    margin-bottom: -54.15px;
+  }
+  
+  .admin-trang-ch .group-19 {
+    position: absolute;
+    width: 125px;
+    height: 24px;
+    top: 0;
+    left: 0;
+  }
+  
+  .admin-trang-ch .text-wrapper-15 {
+    position: absolute;
+    top: 0;
+    left: 39px;
+    font-family: "Poppins-Regular", Helvetica;
+    font-weight: 400;
+    color: #0b63f8;
+    font-size: 16px;
+    letter-spacing: 0.32px;
+    line-height: normal;
+  }
+  
+  .admin-trang-ch .img-3 {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    top: 3px;
+    left: 13px;
+  }
+
+  .admin-trang-ch .star {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    top: -5px;
+    left: 1px;
+  }
+
+  .admin-trang-ch .empty-wallet {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    top: -5px;
+    left: 0px;
+  }
+  
+  .admin-trang-ch .group-20 {
+    position: absolute;
+    width: 142px;
+    height: 24px;
+    top: 65px;
+    left: 0;
+    opacity: 0.6;
+  }
+  
+  .admin-trang-ch .text-wrapper-16 {
+    position: absolute;
+    top: 0;
+    left: 40px;
+    font-family: "Poppins-Regular", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 16px;
+    letter-spacing: 0.32px;
+    line-height: normal;
+  }
+  
+  .admin-trang-ch .group-21 {
+    position: absolute;
+    width: 128px;
+    height: 24px;
+    top: 130px;
+    left: 0;
+    opacity: 0.6;
+  }
+  
+  .admin-trang-ch .text-wrapper-17 {
+    position: absolute;
+    top: 0;
+    left: 40px;
+    font-family: "Poppins-Regular", Helvetica;
+    font-weight: 400;
+    color: #131313;
+    font-size: 16px;
+    letter-spacing: 0.32px;
+    line-height: normal;
+  }
+  
+  .admin-trang-ch .group-22 {
+    position: absolute;
+    width: 153px;
+    height: 48px;
+    top: 190px;
+    left: -12px;
+    opacity: 0.6;
+  }
+  
+  .admin-trang-ch .text-wrapper-18 {
+    position: absolute;
+    top: 5px;
+    left: 52px;
+    font-family: "Poppins-Regular", Helvetica;
+    font-weight: 400;
+    color: #131313;
+    font-size: 16px;
+    letter-spacing: 0.32px;
+    line-height: normal;
+  }
+  
+  .admin-trang-ch .group-23 {
+    position: absolute;
+    width: 47px;
+    height: 48px;
+    top: 0;
+    left: 0;
+  }
+  
+  .admin-trang-ch .group-24 {
+    position: absolute;
+    width: 125px;
+    height: 24px;
+    top: 257px;
+    left: 0;
+    opacity: 0.6;
+  }
+  
+  .admin-trang-ch .group-25 {
+    position: absolute;
+    width: 137px;
+    height: 24px;
+    top: 324px;
+    left: 2px;
+    opacity: 0.6;
+  }
+  
+  .admin-trang-ch .text-wrapper-19 {
+    position: absolute;
+    top: 0;
+    left: 38px;
+    font-family: "Poppins-Regular", Helvetica;
+    font-weight: 400;
+    color: #131313;
+    font-size: 16px;
+    letter-spacing: 0.32px;
+    line-height: normal;
+  }
+  
+  .admin-trang-ch .group-26 {
+    position: absolute;
+    width: 103px;
+    height: 24px;
+    top: 384px;
+    left: 0;
+    opacity: 0.6;
+  }
+  
+  .admin-trang-ch .setting {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    top: 0;
+    left: 0;
+    background-image: url(./img/star.svg);
+    background-size: 100% 100%;
+  }
+  
+  .admin-trang-ch .logo {
+    position: absolute;
+    width: 124px;
+    height: 36px;
+    top: 64px;
+    left: 41px;
+  }
+  
+  .admin-trang-ch .text-wrapper-20 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-family: "Poppins-Medium", Helvetica;
+    font-weight: 500;
+    color: #013cc6;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .admin-trang-ch .rectangle-7 {
+    position: absolute;
+    width: 625px;
+    height: 472px;
+    top: 3716px;
+    left: -2310px;
+  }
+
+ 
