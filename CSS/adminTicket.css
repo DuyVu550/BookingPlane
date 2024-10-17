@@ -112,13 +112,8 @@
     color:#000000; 
   }
   
-  a-main{
-    text-decoration: none;
-    color:#6da1fb; 
-  }
-
   a:hover{
-    color:#0b63f8
+    color:#0b63f8;
   }
 
   .qun-l-khch-hng .frame {
@@ -140,7 +135,7 @@
   .qun-l-khch-hng .text-wrapper-2 {
     position: absolute;
     top: 0;
-    left: 72px;
+    left: 80px;
     font-family: "Lato-SemiBold", Helvetica;
     font-weight: 600;
     color: #000000;
@@ -152,7 +147,7 @@
   
   .qun-l-khch-hng .text-wrapper-3 {
     top: 0;
-    left: 261px;
+    left: 200px;
     font-family: "Lato-SemiBold", Helvetica;
     font-weight: 600;
     white-space: nowrap;
@@ -166,7 +161,7 @@
   .qun-l-khch-hng .text-wrapper-4 {
     position: absolute;
     top: 0;
-    left: 384px;
+    left: 375px;
     font-family: "Lato-SemiBold", Helvetica;
     font-weight: 600;
     color: #000000;
@@ -213,7 +208,7 @@
   .qun-l-khch-hng .text-wrapper-7 {
     position: absolute;
     top: 0;
-    left: 882px;
+    left: 875px;
     font-family: "Lato-SemiBold", Helvetica;
     font-weight: 600;
     color: #000000;
@@ -273,7 +268,7 @@
   
   .qun-l-khch-hng .text-wrapper-10 {
     top: 2px;
-    left: 701px;
+    left: 690px;
     position: absolute;
     opacity: 0.65;
     font-family: "Poppins-Regular", Helvetica;
@@ -287,7 +282,7 @@
   .qun-l-khch-hng .text-wrapper-11 {
     margin-left:5px ;
     top: 0;
-    left: 883px;
+    left: 865px;
     position: absolute;
     opacity: 0.65;
     font-family: "Poppins-Regular", Helvetica;
@@ -315,7 +310,7 @@
   .qun-l-khch-hng .text-wrapper-13 {
     width: 127px;
     top: 0;
-    left: 529px;
+    left: 560px;
     opacity: 0.65;
     font-family: "Poppins-Regular", Helvetica;
     font-weight: 400;
@@ -439,7 +434,7 @@
     position: absolute;
     width: 3px;
     height: 39px;
-    top: 213px;
+    top: 280px;
     left: 0;
     background-color: #6da1fb;
   }
@@ -624,3 +619,42 @@
     line-height: normal;
   }
   
+  .qun-l-khch-hng .text-wrapper-gia{
+    top: 2px;
+    left: 1030px;
+    position: absolute;
+    opacity: 0.65;
+    font-family: "Poppins-Regular", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+
+  .qun-l-khch-hng .text-wrapper-giatb {
+    position: absolute;
+    top: 0;
+    left: 1030px;
+    font-family: "Lato-SemiBold", Helvetica;
+    font-weight: 600;
+    color: #000000;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+
+  a{
+    text-decoration: none;
+    color:#000000; 
+  }
+  
+  a-main{
+    text-decoration: none;
+    color:#6da1fb; 
+  }
+
+  a:hover{
+    color:#0b63f8
+  }
