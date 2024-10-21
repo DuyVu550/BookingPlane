@@ -135,7 +135,7 @@
   .qun-l-khch-hng .text-wrapper-2 {
     position: absolute;
     top: 0;
-    left: 80px;
+    left: 70px;
     font-family: "Lato-SemiBold", Helvetica;
     font-weight: 600;
     color: #000000;
@@ -147,7 +147,7 @@
   
   .qun-l-khch-hng .text-wrapper-3 {
     top: 0;
-    left: 200px;
+    left: 225px;
     font-family: "Lato-SemiBold", Helvetica;
     font-weight: 600;
     white-space: nowrap;
@@ -161,7 +161,7 @@
   .qun-l-khch-hng .text-wrapper-4 {
     position: absolute;
     top: 0;
-    left: 375px;
+    left: 360px;
     font-family: "Lato-SemiBold", Helvetica;
     font-weight: 600;
     color: #000000;
@@ -173,7 +173,7 @@
   
   .qun-l-khch-hng .text-wrapper-5 {
     top: 0;
-    left: 555px;
+    left: 520px;
     font-family: "Lato-SemiBold", Helvetica;
     font-weight: 600;
     white-space: nowrap;
@@ -208,7 +208,7 @@
   .qun-l-khch-hng .text-wrapper-7 {
     position: absolute;
     top: 0;
-    left: 875px;
+    left: 850px;
     font-family: "Lato-SemiBold", Helvetica;
     font-weight: 600;
     color: #000000;
@@ -244,7 +244,7 @@
   .qun-l-khch-hng .text-wrapper-8 {
     position: absolute;
     top: 2px;
-    left: 79px;
+    left: 100px;
     font-family: "Poppins-Regular", Helvetica;
     font-weight: 400;
     color: #0b63f8;
@@ -255,7 +255,7 @@
   
   .qun-l-khch-hng .text-wrapper-9 {
     top: 2px;
-    left: 230px;
+    left: 245px;
     opacity: 0.65;
     font-family: "Poppins-Regular", Helvetica;
     font-weight: 400;
@@ -268,7 +268,7 @@
   
   .qun-l-khch-hng .text-wrapper-10 {
     top: 2px;
-    left: 690px;
+    left: 740px;
     position: absolute;
     opacity: 0.65;
     font-family: "Poppins-Regular", Helvetica;
@@ -282,7 +282,7 @@
   .qun-l-khch-hng .text-wrapper-11 {
     margin-left:5px ;
     top: 0;
-    left: 865px;
+    left: 900px;
     position: absolute;
     opacity: 0.65;
     font-family: "Poppins-Regular", Helvetica;
@@ -310,7 +310,7 @@
   .qun-l-khch-hng .text-wrapper-13 {
     width: 127px;
     top: 0;
-    left: 560px;
+    left: 570px;
     opacity: 0.65;
     font-family: "Poppins-Regular", Helvetica;
     font-weight: 400;
@@ -341,7 +341,7 @@
   
   .qun-l-khch-hng .frame-2 {
     display: flex;
-    width: 936px;
+    width: 1150px;
     align-items: center;
     justify-content: space-between;
     position: absolute;
@@ -365,6 +365,7 @@
     left: 0;
     background-color: rgb(221, 216, 216);
   }
+
   
   .qun-l-khch-hng .text-wrapper-14 {
     position: absolute;
@@ -401,7 +402,7 @@
   
   .qun-l-khch-hng .frame-3 {
     display: flex;
-    width: 936px;
+    width: 1150px;
     align-items: center;
     justify-content: space-between;
     position: absolute;
@@ -434,7 +435,7 @@
     position: absolute;
     width: 3px;
     height: 39px;
-    top: 280px;
+    top: 340px;
     left: 0;
     background-color: #6da1fb;
   }
@@ -543,11 +544,11 @@
   
   .qun-l-khch-hng .group-6 {
     position: absolute;
-    width: 20px;
-    height: 25px;
+    width: 50px;
+    height: 50px;
     top: 0;
     left: 0;
-    margin-left: 15px;
+    margin-right: 10px;
   }
   
   .qun-l-khch-hng .group-7 {
@@ -619,9 +620,9 @@
     line-height: normal;
   }
   
-  .qun-l-khch-hng .text-wrapper-gia{
+  .qun-l-khch-hng .text-wrapper-fly{
     top: 2px;
-    left: 1030px;
+    left: 1075px;
     position: absolute;
     opacity: 0.65;
     font-family: "Poppins-Regular", Helvetica;
