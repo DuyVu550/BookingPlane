@@ -1,0 +1,259 @@
+.ng-k,
+.ng-k * {
+  box-sizing: border-box;
+}
+.ng-k {
+  background: #ffffff;
+  height: 1142px;
+  position: relative;
+  overflow: hidden;
+}
+.image {
+  width: 1920px;
+  height: 1142px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  object-fit: cover;
+}
+.rectangle-2 {
+  background: #000000;
+  opacity: 0.5;
+  width: 1920px;
+  height: 1142px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+.rectangle-6649 {
+  border-radius: 0px;
+  width: 1250px;
+  height: 865px;
+  position: absolute;
+  left: 335px;
+  top: 156px;
+  overflow: visible;
+}
+.group-47758 {
+  position: absolute;
+  inset: 0;
+}
+.rectangle-5 {
+  border-radius: 0px;
+  width: 266px;
+  height: 86px;
+  position: absolute;
+  left: 827px;
+  top: 831px;
+  overflow: visible;
+}
+.ng-k2 {
+  color: #5821fd;
+  text-align: center;
+  font-family: "Kodchasan-Bold", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  position: absolute;
+  left: 820px;
+  top: 835px;
+}
+.ng-k-t-i-kho-n {
+  color: #000000;
+  text-align: left;
+  font-family: "Kodchasan-Bold", sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  position: absolute;
+  left: 746px;
+  top: 191px;
+}
+.group-47756 {
+  position: absolute;
+  inset: 0;
+}
+.rectangle-6650 {
+  background: #d9d9d9;
+  width: 1063px;
+  height: 71px;
+  position: absolute;
+  left: 428px;
+  top: 285px;
+}
+.t-i-kho-n {
+  color: #000000;
+  text-align: left;
+  font-family: "Kodchasan-Regular", sans-serif;
+  font-size: 32px;
+  font-weight: 400;
+  position: absolute;
+  left: 428px;
+  top: 243px;
+}
+.group-47757 {
+  position: absolute;
+  inset: 0;
+}
+.rectangle-66502 {
+  background: #d9d9d9;
+  width: 1063px;
+  height: 71px;
+  position: absolute;
+  left: 428px;
+  top: 432px;
+}
+.email {
+  color: #000000;
+  text-align: left;
+  font-family: "Kodchasan-Regular", sans-serif;
+  font-size: 32px;
+  font-weight: 400;
+  position: absolute;
+  left: 428px;
+  top: 390px;
+}
+.group-47759 {
+  position: absolute;
+  inset: 0;
+}
+.rectangle-66503 {
+  background: #d9d9d9;
+  width: 1063px;
+  height: 71px;
+  position: absolute;
+  left: 428px;
+  top: 579px;
+}
+.m-t-kh-u {
+  color: #000000;
+  text-align: left;
+  font-family: "Kodchasan-Regular", sans-serif;
+  font-size: 32px;
+  font-weight: 400;
+  position: absolute;
+  left: 428px;
+  top: 537px;
+}
+.group-47760 {
+  position: absolute;
+  inset: 0;
+}
+.rectangle-66504 {
+  background: #d9d9d9;
+  width: 1063px;
+  height: 71px;
+  position: absolute;
+  left: 428px;
+  top: 726px;
+}
+.nh-p-l-i-m-t-kh-u {
+  color: #000000;
+  text-align: left;
+  font-family: "Kodchasan-Regular", sans-serif;
+  font-size: 32px;
+  font-weight: 400;
+  position: absolute;
+  left: 428px;
+  top: 684px;
+}
+.c-t-i-kho-n-ng-nh-p-ngay {
+  text-align: center;
+  font-family: "Kodchasan-Bold", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  position: absolute;
+  left: 756px;
+  top: 951px;
+}
+.c-t-i-kho-n-ng-nh-p-ngay-span {
+  color: #000000;
+  font-family: "Kodchasan-Bold", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+}
+.c-t-i-kho-n-ng-nh-p-ngay-span2 {
+  color: #ff0000;
+  font-family: "Kodchasan-Bold", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+button{
+    border-radius: 20px;
+    width: 266px;
+    height: 86px;
+    position: absolute;
+    overflow: visible;
+    background-color: hsl(180, 100%, 54%);
+}
+button:hover{
+    border-radius: 20px;
+    width: 266px;
+    height: 86px;
+    position: absolute;
+    overflow: visible;
+    background-color: #06ffa8;
+    cursor:pointer;
+}
+
+input[type=text]{
+    width: 100%;    
+    height: 71px;
+    border: 2px solid #aaa;
+    border-radius: 4px;
+    outline: none;
+    padding: 8px;
+    box-sizing: border-box;
+    transition: .3s;
+    font-size: 25px;
+  }
+  input[type=text]:focus{
+    border-color:dodgerblue ;
+    box-shadow: 0 0 8px 0 dodgerblue;
+  }
+  input[type=password]{
+    width: 100%;    
+    height: 71px;
+    border: 2px solid #aaa;
+    border-radius: 4px;
+    outline: none;
+    padding: 8px;
+    box-sizing: border-box;
+    transition: .3s;
+    font-size: 25px;
+  }
+  input[type=password]:focus{
+    border-color:dodgerblue ;
+    box-shadow: 0 0 8px 0 dodgerblue;
+  }
+
+  a{
+    color:#ff0000;
+  }
+
+  a:hover{
+    color: brown;
+  }
+  input[type=submit]{
+    width: 266px;    
+    height: 86px;
+    font-size: 25px;
+    color: #5821fd;
+    text-align: center;
+    font-family: "Kodchasan-Bold", sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    position: absolute;
+    background-image: url('/image/Rectangle 5 (1).png');
+    background-repeat:no-repeat;
+    border-radius: 35px;
+    display: block;
+    line-height: 10px;;
+  }
+
+  input[type=submit]:hover{
+    color:#504a62;
+    background-color:#06ffa8;
+    background-image: none;
+    cursor: pointer;
+  }
