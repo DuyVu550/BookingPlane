@@ -1,18 +1,60 @@
 <?php
-
 require_once('Config/script.php');
-$query = "Select * from bookplan";
-$result = mysqli_query($con, $query);
 
+// Check if the form has been submitted
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  // Sanitize and retrieve form data
+  $diemDen = isset($_POST['DiemDen']) ? htmlspecialchars($_POST['DiemDen']) : '';
+  $diemDi = isset($_POST['DiemDi']) ? htmlspecialchars($_POST['DiemDi']) : '';
+  $dateGo = isset($_POST['Datego']) ? htmlspecialchars($_POST['Datego']) : '';
+  $dateBack = isset($_POST['Dateback']) ? htmlspecialchars($_POST['Dateback']) : '';
+} else {
+  header("Location: homePage.PHP"); // Replace with your actual form page
+  exit();
+}
 
+// Prepare the SQL query
+$query = "SELECT * FROM bookplan WHERE 1=1"; // Start with a true condition
+
+// Add filters based on the input values
+$params = [];
+if ($diemDen) {
+  $query .= " AND DiemDi = ?";
+  $params[] = $diemDen;
+}
+if ($diemDi) {
+  $query .= " AND DiemDen = ?";
+  $params[] = $diemDi;
+}
+if ($dateGo) {
+  $query .= " AND KhoiHanh = ?";
+  $params[] = $dateGo; // Assuming 'KhoiHanh' is the column for the departure date
+}
+if ($dateBack) {
+  $query .= " AND NgayVe = ?"; // Assuming 'NgayVe' is the column for the return date
+  $params[] = $dateBack;
+}
+
+// Prepare the statement
+$stmt = mysqli_prepare($con, $query);
+
+// Bind parameters if any
+if ($params) {
+  mysqli_stmt_bind_param($stmt, str_repeat('s', count($params)), ...$params);
+}
+
+// Execute the statement
+mysqli_stmt_execute($stmt);
+$result = mysqli_stmt_get_result($stmt);
 ?>
+
 
 <!DOCTYPE html>
 <html>
 
 <head>
   <meta charset="utf-8" />
-  <link rel="stylesheet" href="globals.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="CSS/List.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,6 +63,11 @@ $result = mysqli_query($con, $query);
 </head>
 
 <body>
+  <!--<h1>Results</h1> Test Search 
+          <p>Điểm đến: <?php echo $diemDen; ?></p>
+          <p>Điểm đi: <?php echo $diemDi; ?></p>
+          <p>Ngày đi: <?php echo $dateGo ? $dateGo : 'Không cung cấp.'; ?></p>
+          <p>Ngày về: <?php echo $dateBack ? $dateBack : 'Không cung cấp.'; ?></p> -->
   <div class="trang-t-v">
     <div class="slide-wrapper">
       <div class="slide">
@@ -88,50 +135,53 @@ $result = mysqli_query($con, $query);
           <img class="image-5" src="image/image 10.png" />
 
           <div class="table1">
-
-
             <?php
-            while ($row = mysqli_fetch_assoc($result)) {
+            if (mysqli_num_rows($result) > 0) {
+              while ($row = mysqli_fetch_assoc($result)) {
             ?>
-              <div class="card">
-                <div class="rectangle-12">
-                  <div class="flex-container">
-                    <div class="row-container">
-                      <i></i>
-                      <label class="location"> <?php echo $row['DiemDi']; ?> </d> </label>
-                      <img class="line-5" src="image/Line 5.png" />
-                      <label class="date"> <?php echo $row['KhoiHanh']; ?> </d> </label>
-                      <div><img class="access-time" src="image/access_time.png" /><label class="label"> <?php echo $row['ThoiGian']; ?> </d> </label></div>
+                <div class="card">
+                  <div class="rectangle-12">
+                    <div class="flex-container">
+                      <div class="row-container">
+                        <label class="location"><?php echo $row['DiemDi']; ?></label>
+                        <img class="line-5" src="image/Line 5.png" />
+                        <label class="date"><?php echo $row['KhoiHanh']; ?></label>
+                        <div>
+                          <img class="access-time" src="image/access_time.png" />
+                          <label class="label"><?php echo $row['ThoiGian']; ?></label>
+                        </div>
+                      </div>
+                      <div class="row-container">
+                        <label class="location"><?php echo $row['DiemDen']; ?></label>
+                        <img class="line-5" src="image/Line 5.png" />
+                        <label class="date"><?php echo $row['KhoiHanh']; ?></label>
+                        <div>
+                          <img class="access-time" src="image/access_time.png" />
+                          <label class="label"><?php echo $row['ThoiGian']; ?></label>
+                        </div>
+                      </div>
                     </div>
-                    <div class="row-container">
-                      <i></i>
-                      <label class="location"> <?php echo $row['DiemDen']; ?> </d> </label>
-                      <img class="line-5" src="image/Line 5.png" />
-                      <label class="date"> <?php echo $row['KhoiHanh']; ?> </d> </label>
-                      <div><img class="access-time" src="image/access_time.png" /><label class="label"> <?php echo $row['ThoiGian']; ?> </d> </label></div>
-                    </div>
-                    
-
-
+                    <div class="text-wrapper-26">Hạng thường</div>
+                    <div class="text-wrapper-21">3.265.000VND</div>
+                    <div class="rectangle-20"></div>
+                    <div class="text-wrapper-55">Xem Vé</div>
                   </div>
-                  <div class="text-wrapper-26">Hạng thường</div>
-                  <div class="text-wrapper-21">3.265.000VND</div>
-                  <div class="rectangle-20"></div>
-                  <div class="text-wrapper-55">Xem Vé</div>
                 </div>
-              </div>
-
             <?php
-
+              }
+            } else {
+              echo '<p class="Result">Không tìm thấy chuyến bay.</p>';
+              echo '<p class="text-wrapper-22">Có thể có thêm ngày cho lựa chọn chuyến bay của Quý khách!</p>';
+              echo '<div class="text-wrapper-23">Chọn ngày khác</div>';
             }
             ?>
           </div>
 
 
-          <p class="text-wrapper-22">Có thể có thêm ngày cho lựa chọn chuyến bay của Quý khách!</p>
-          <div class="text-wrapper-23">Chọn ngày khác</div>
 
-          
+
+
+
 
           <button class="sort">
             <div class="sort-text">
