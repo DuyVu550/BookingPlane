@@ -1,3 +1,12 @@
+<?php
+error_reporting(0);
+session_start();	
+if(!isset($_SESSION["Username"]))
+{
+  header("location:loginAdmin.php");
+}
+session_destroy();
+?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -12,8 +21,13 @@
         <div class="overlap">
           <img class="rectangle" src="image/Rectangle 6646.png" />
           <div class="rectangle-2"></div>
+          <div class="text-wrapper-logout"><a href="logout.php">Đăng xuất</div></a>
           <img class="profile-avtar" src="image/Profile.png" />
           <div class="sales-info-search"><div class="text-wrapper">Chào mừng Admin</div></div>
+          <?php if(isset($_GET['error'])){?>
+          <p class="error"><?php echo $_GET['error']; ?></p>
+        <?php }
+        ?>
           <div class="group">
             <div class="overlap-group">
               <div class="rectangle-3"></div>
