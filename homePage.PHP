@@ -1,8 +1,8 @@
 <?php
-require_once('Config/script.php'); // Your database connection file
+require_once('Config/script.php'); 
 
 // Fetch locations from the database
-$query = "SELECT Tinh FROM sanbay"; // Adjust your table name as necessary
+$query = "SELECT Tinh FROM sanbay"; 
 $result = mysqli_query($con, $query);
 $locations = [];
 

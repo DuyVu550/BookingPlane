@@ -3,20 +3,19 @@ require_once('Config/script.php');
 
 // Check if the form has been submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  // Sanitize and retrieve form data
   $diemDen = isset($_POST['DiemDen']) ? htmlspecialchars($_POST['DiemDen']) : '';
   $diemDi = isset($_POST['DiemDi']) ? htmlspecialchars($_POST['DiemDi']) : '';
   $dateGo = isset($_POST['Datego']) ? htmlspecialchars($_POST['Datego']) : '';
   $dateBack = isset($_POST['Dateback']) ? htmlspecialchars($_POST['Dateback']) : '';
 } else {
-  header("Location: homePage.PHP"); // Replace with your actual form page
+  header("Location: homePage.PHP");
   exit();
 }
 
 // Prepare the SQL query
-$query = "SELECT * FROM bookplan WHERE 1=1"; // Start with a true condition
+$query = "SELECT * FROM bookplan WHERE 1=1"; 
 
-// Add filters based on the input values
+
 $params = [];
 if ($diemDen) {
   $query .= " AND DiemDi = ?";
@@ -28,22 +27,21 @@ if ($diemDi) {
 }
 if ($dateGo) {
   $query .= " AND KhoiHanh = ?";
-  $params[] = $dateGo; // Assuming 'KhoiHanh' is the column for the departure date
+  $params[] = $dateGo;
 }
 if ($dateBack) {
-  $query .= " AND NgayVe = ?"; // Assuming 'NgayVe' is the column for the return date
+  $query .= " AND NgayVe = ?"; 
   $params[] = $dateBack;
 }
 
-// Prepare the statement
+
 $stmt = mysqli_prepare($con, $query);
 
-// Bind parameters if any
 if ($params) {
   mysqli_stmt_bind_param($stmt, str_repeat('s', count($params)), ...$params);
 }
 
-// Execute the statement
+
 mysqli_stmt_execute($stmt);
 $result = mysqli_stmt_get_result($stmt);
 ?>
