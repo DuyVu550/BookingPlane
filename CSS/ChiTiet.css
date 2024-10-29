@@ -90,178 +90,6 @@ img {
     box-shadow: 0px 4px 30px #00000040;
   }
   
-  .trang-t-v .rectangle-2 {
-    position: absolute;
-    width: 41px;
-    height: 88px;
-    top: 912px;
-    left: 50px;
-    background-color: #d9d9d9;
-    border-radius: 80px;
-    transform: rotate(180deg);
-    box-shadow: inset 0px 4px 25px #00000040, 0px 4px 4px 1.5px #00000040;
-  }
-  
-  .trang-t-v .img {
-    width: 44px;
-    height: 44px;
-    top: 934px;
-    left: 47px;
-    position: absolute;
-    object-fit: cover;
-  }
-  
-  .trang-t-v .rectangle-3 {
-    position: absolute;
-    width: 1748px;
-    height: 290px;
-    top: 810px;
-    left: 86px;
-  }
-  
-  .trang-t-v .rectangle-4 {
-    position: absolute;
-    width: 297px;
-    height: 147px;
-    top: 877px;
-    left: 1160px;
-    background-color: #eff256;
-    border-radius: 50px;
-    box-shadow: 0px 1px 25px #000000;
-  }
-  
-  .trang-t-v .rectangle-5 {
-    position: absolute;
-    width: 297px;
-    height: 147px;
-    top: 877px;
-    left: 1509px;
-    background-color: #faf30eb0;
-    border-radius: 50px;
-    box-shadow: 0px 1px 25px #000000;
-  }
-
-  
-  .trang-t-v .rectangle-6 {
-    position: absolute;
-    width: 297px;
-    height: 147px;
-    top: 877px;
-    left: 462px;
-    background-color: #eef156;
-    border-radius: 50px;
-    box-shadow: 0px 1px 25px #000000;
-  }
-  
-  .trang-t-v .rectangle-7 {
-    position: absolute;
-    width: 297px;
-    height: 147px;
-    top: 877px;
-    left: 116px;
-    background-color: #eef156;
-    border-radius: 50px;
-    box-shadow: 0px 1px 25px #000000;
-  }
-  
-  .trang-t-v .rectangle-8 {
-    position: absolute;
-    width: 297px;
-    height: 147px;
-    top: 877px;
-    left: 811px;
-    background-color: #68bdda;
-    border-radius: 50px;
-    border: 1px solid;
-    border-color: #000000;
-    box-shadow: 0px 1px 30px 5px #257489;
-  }
-  
-  .trang-t-v .text-wrapper {
-    position: absolute;
-    width: 306px;
-    top: 928px;
-    left: 798px;
-    text-shadow: 0px 4px 4px #00000040;
-    -webkit-text-stroke: 1px #000000;
-    font-family: "Roboto-Regular", Helvetica;
-    font-weight: 400;
-    color: #000000;
-    font-size: 40px;
-    text-align: center;
-    letter-spacing: 0;
-    line-height: normal;
-    white-space: nowrap;
-  }
-  
-  .trang-t-v .p {
-    position: absolute;
-    width: 306px;
-    top: 928px;
-    left: 1156px;
-    text-shadow: 0px 4px 4px #00000040;
-    -webkit-text-stroke: 1px #000000;
-    font-family: "Roboto-Regular", Helvetica;
-    font-weight: 400;
-    color: #000000;
-    font-size: 40px;
-    text-align: center;
-    letter-spacing: 0;
-    line-height: normal;
-    white-space: nowrap;
-  }
-  
-  .trang-t-v .text-wrapper-2 {
-    position: absolute;
-    width: 306px;
-    top: 928px;
-    left: 1504px;
-    text-shadow: 0px 4px 4px #00000040;
-    -webkit-text-stroke: 1px #000000;
-    font-family: "Roboto-Regular", Helvetica;
-    font-weight: 400;
-    color: #000000;
-    font-size: 40px;
-    text-align: center;
-    letter-spacing: 0;
-    line-height: normal;
-    white-space: nowrap;
-  }
-  
-  .trang-t-v .text-wrapper-3 {
-    position: absolute;
-    width: 306px;
-    top: 928px;
-    left: 457px;
-    text-shadow: 0px 4px 4px #00000040;
-    -webkit-text-stroke: 1px #000000;
-    font-family: "Roboto-Regular", Helvetica;
-    font-weight: 400;
-    color: #000000;
-    font-size: 40px;
-    text-align: center;
-    letter-spacing: 0;
-    line-height: normal;
-    white-space: nowrap;
-  }
-  
-  .trang-t-v .text-wrapper-4 {
-    position: absolute;
-    width: 306px;
-    top: 928px;
-    left: 111px;
-    text-shadow: 0px 4px 4px #00000040;
-    -webkit-text-stroke: 1px #000000;
-    font-family: "Roboto-Regular", Helvetica;
-    font-weight: 400;
-    color: #000000;
-    font-size: 40px;
-    text-align: center;
-    letter-spacing: 0;
-    line-height: normal;
-    white-space: nowrap;
-  }
-  
   .trang-t-v .ng-k-button {
     position: absolute;
     width: 199px;
@@ -610,25 +438,13 @@ img {
     position: absolute;
     object-fit: cover;
   }
-  
-  .trang-t-v .rectangle-11 {
+
+  .Ve-text{
     position: absolute;
-    width: 41px;
-    height: 88px;
-    top: 912px;
-    left: 1831px;
-    background-color: #d9d9d9;
-    border-radius: 80px;
-    box-shadow: inset 0px 4px 25px #00000040, 0px 4px 4px 1.5px #00000040;
-  }
-  
-  .trang-t-v .image-5 {
-    width: 44px;
-    height: 44px;
-    top: 934px;
-    left: 1831px;
-    position: absolute;
-    object-fit: cover;
+    top:100px;
+    left:793px;
+    font-size: 64px;
+    font-weight: bold;
   }
 
   .row-container{
@@ -642,7 +458,7 @@ img {
     margin-bottom:80px;
   }
    .rectangle-12 {
-    background-color: #053947;
+    background-color: #5dbdd6;
     position: relative;
     width: 1740px;
     height: 282px;
@@ -907,14 +723,6 @@ img {
     border-radius: 15px;
     box-shadow: 0px 4px 4px #00000040;
     background: linear-gradient(180deg, rgb(247.78, 249.26, 172.61) 0%, rgb(253.51, 254.36, 210.06) 97.5%);
-    text-shadow: 0px 4px 4px #00000040;
-    font-family: "Kodchasan-Bold", Helvetica;
-    font-weight: 700;
-    color: #5720fd;
-    font-size: 40px;
-    text-align: center;
-    letter-spacing: 0;
-    line-height: normal;
   }
 
   
@@ -940,5 +748,12 @@ img {
     height: 44px;
     top:6px;
   }
-  
+  .Sum{
+    position: absolute;
+    top: 1200px;
+    left:1193px;
+    font-size: 42px;
+    margin-top: 100px;
+    font-weight: bold;
+  }
   

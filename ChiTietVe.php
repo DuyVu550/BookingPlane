@@ -1,59 +1,16 @@
 <?php
 require_once('Config/script.php');
 
-// Check if the form has been submitted
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  $diemDen = isset($_POST['DiemDen']) ? htmlspecialchars($_POST['DiemDen']) : '';
-  $diemDi = isset($_POST['DiemDi']) ? htmlspecialchars($_POST['DiemDi']) : '';
-  $dateGo = isset($_POST['Datego']) ? htmlspecialchars($_POST['Datego']) : '';
-  $dateBack = isset($_POST['Dateback']) ? htmlspecialchars($_POST['Dateback']) : '';
-} else {
-  header("Location: homePage.PHP");
-  exit();
-}
-
-// Prepare the SQL query
-$query = "SELECT * FROM bookplan WHERE 1=1";
-
-
-$params = [];
-if ($diemDen) {
-  $query .= " AND DiemDi = ?";
-  $params[] = $diemDen;
-}
-if ($diemDi) {
-  $query .= " AND DiemDen = ?";
-  $params[] = $diemDi;
-}
-if ($dateGo) {
-  $query .= " AND KhoiHanh = ?";
-  $params[] = $dateGo;
-}
-if ($dateBack) {
-  $query .= " AND NgayVe = ?";
-  $params[] = $dateBack;
-}
-
-
-$stmt = mysqli_prepare($con, $query);
-
-if ($params) {
-  mysqli_stmt_bind_param($stmt, str_repeat('s', count($params)), ...$params);
-}
-
-
-mysqli_stmt_execute($stmt);
-$result = mysqli_stmt_get_result($stmt);
+$query = "SELECT * FROM booking WHERE MaKH = 1 and TinhTrang = 'Đang đặt' "; 
+$result = mysqli_query($con, $query);
 ?>
-
-
 <!DOCTYPE html>
 <html>
 
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="CSS/List.css" />
+  <link rel="stylesheet" href="CSS/ChiTiet.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
@@ -61,31 +18,16 @@ $result = mysqli_stmt_get_result($stmt);
 </head>
 
 <body>
-  <!--<h1>Results</h1> Test Search 
-          <p>Điểm đến: <?php echo $diemDen; ?></p>
-          <p>Điểm đi: <?php echo $diemDi; ?></p>
-          <p>Ngày đi: <?php echo $dateGo ? $dateGo : 'Không cung cấp.'; ?></p>
-          <p>Ngày về: <?php echo $dateBack ? $dateBack : 'Không cung cấp.'; ?></p> -->
   <div class="trang-t-v">
     <div class="slide-wrapper">
       <div class="slide">
         <div class="overlap">
           <img class="image" src="image/image.png" />
           <div class="rectangle"></div>
-          <div class="div"></div>
-          <div class="rectangle-2"></div>
-          <img class="img" src="image/image 11.png" />
-          <img class="rectangle-3" src="image/Rectangle 15.png" />
-          <div class="rectangle-4"></div>
-          <button class="rectangle-5"></button>
-          <div class="rectangle-6"></div>
-          <div class="rectangle-7"></div>
-          <div class="rectangle-8"></div>
-          <p class="text-wrapper">Th 3, 24 thg 9</p>
-          <p class="p">Th 4, 25 thg 9</p>
-          <p class="text-wrapper-2">Th 5, 26 thg 9</p>
-          <p class="text-wrapper-3">Th 2, 23 thg 9</p>
-          <div class="text-wrapper-4">CN, 22 thg 9</div>
+          <div class="div">
+            <label class="Ve-text">Vé đã chọn</label>
+            <p class="Sum">Tổng số tiền là: 3.256.000VNĐ</p>
+          </div>
           <div class="ng-k-button">
             <div class="overlap-group">
               <div class="text-wrapper-5">Đăng ký</div>
@@ -129,21 +71,16 @@ $result = mysqli_stmt_get_result($stmt);
             <div class="text-wrapper-20">1</div>
             <img class="image-4" src="image/image 2.png" />
           </div>
-          <div class="rectangle-11"></div>
-          <img class="image-5" src="image/image 10.png" />
-
           <div class="table1">
             <?php
             if (mysqli_num_rows($result) > 0) {
               while ($row = mysqli_fetch_assoc($result)) {
-                $maCB = $row['MaCB'];
             ?>
-                <form action="Config/BookVe.php" method="post">
                 <div class="card">
                   <div class="rectangle-12">
                     <div class="flex-container">
                       <div class="row-container">
-                        <label class="location"><?php echo $row['DiemDi']; ?></label>
+                        <label class="location"><?php echo $row['TenKH']; ?></label>
                         <img class="line-5" src="image/Line 5.png" />
                         <label class="date"><?php echo $row['KhoiHanh']; ?></label>
                         <div>
@@ -152,7 +89,7 @@ $result = mysqli_stmt_get_result($stmt);
                         </div>
                       </div>
                       <div class="row-container">
-                        <label class="location"><?php echo $row['DiemDen']; ?></label>
+                        <label class="location">Mã Máy Bay:<?php echo $row['MaMB']; ?></label>
                         <img class="line-5" src="image/Line 5.png" />
                         <label class="date"><?php echo $row['KhoiHanh']; ?></label>
                         <div>
@@ -163,11 +100,10 @@ $result = mysqli_stmt_get_result($stmt);
                     </div>
                     <div class="text-wrapper-26">Hạng thường</div>
                     <div class="text-wrapper-21">3.265.000VND</div>
-                    <input type="hidden" name="MaCB" value="<?php echo $maCB; ?>" />
-                    <button type="submit" class="rectangle-20">Xem Vé</button>
+                    <button type="submit" class="rectangle-20"></button>
+                    <div class="text-wrapper-55">Xem Vé</div>
                   </div>
                 </div>
-                </form>
             <?php
               }
             } else {
@@ -177,21 +113,6 @@ $result = mysqli_stmt_get_result($stmt);
             }
             ?>
           </div>
-
-
-
-
-
-
-
-          <button class="sort">
-            <div class="sort-text">
-              <div class="text-wrapper">Hiển thị bộ lọc</div>
-            </div>
-          </button>
-
-
-
         </div>
       </div>
     </div>

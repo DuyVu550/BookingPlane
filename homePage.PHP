@@ -27,7 +27,7 @@ if ($result) {
       <div class="overlap">
         <img class="image" src="image/image.png" />
         <div class="rectangle"></div>
-        <div class="div"></div>
+        <div class="div" ></div>
         <div class="ng-k-button">
           <div class="overlap-group">
             <div class="text-wrapper">Đăng ký</div>
@@ -48,7 +48,7 @@ if ($result) {
         </div>
         <p class="p">CẢ THẾ GIỚI CHỈ VỎN VẸN TRONG BÀN TAY</p>
         <form class="Search-Form" action="ListVe.php" method="POST">
-          <label for="DiemDen">Điểm đến:</label>
+          <label for="DiemDi" class="DiemDi">Điểm đi:</label>
           <select class="Go" name="DiemDen" id="DiemDen" required>
         <option value="">Chọn điểm đến</option>
         <?php foreach ($locations as $location) : ?>
@@ -56,7 +56,7 @@ if ($result) {
         <?php endforeach; ?>
     </select>
 
-    <label for="DiemDi">Điểm đi:</label>
+    <label for="DiemDen" class="DiemDen">Điểm đến:</label>
     <select class="Back" name="DiemDi" id="DiemDi" required>
         <option value="">Chọn điểm đi</option>
         <?php foreach ($locations as $location) : ?>
@@ -64,11 +64,11 @@ if ($result) {
         <?php endforeach; ?>
     </select>
       
-          <label for="Datego">Ngày đi:</label>
-          <input type="date" class="Datego" name="Datego" id="Datego" required>
+          <label for="Datego" class="NgayDi">Ngày đi:</label>
+          <input type="date" id="dateGo" class="Datego" name="Datego" id="Datego" required>
       
-          <label for="Dateback">Ngày về:</label>
-          <input type="date" class="Dateback" name="Dateback" id="Dateback">
+          <label for="Dateback" class="NgayVe">Ngày về:</label>
+          <input type="date" id="dateBack" class="Dateback" name="Dateback" id="Dateback" disabled>
       
           <div class="rectangle-8"></div>
           <div class="text-wrapper-13">Một chiều</div>
@@ -78,9 +78,22 @@ if ($result) {
           <div class="text-wrapper-4">Đặt vé ngay !</div>
         </button>   
         </form>
+        <script>
+    document.getElementById('dateGo').addEventListener('change', function() {
+        const departureDate = this.value;
+        const returnDateInput = document.getElementById('dateBack');
+
+        if (departureDate) {
+            returnDateInput.disabled = false;
+
+            returnDateInput.min = new Date(departureDate).toISOString().split("T")[0];
+        } else {
+            returnDateInput.disabled = true;
+        }
+    });
+</script>
 
         <img class="left-arrow" src="image/Left Arrow.png" />
-        <img class="vector" src="image/Vector.png" />
         <img class="person-add-alt" src="image/Person add alt 1.png" />
         <p class="t-v-ngay-nh-n-ng-n">
           Đặt vé ngay ! Nhận ngàn chuyến bay !<br />Giảm ngay 20% khi đặt chuyến bay<br />đến Munch (Đức)

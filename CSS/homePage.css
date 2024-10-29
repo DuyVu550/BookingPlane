@@ -226,6 +226,34 @@ img {
     border-radius: 50px;
     box-shadow: 0px 4px 100px #000000;
   }
+  .DiemDi{
+    position: absolute;
+    top: 0px;
+    left: 40px;
+    margin: 20px;
+    font-size: 24px;
+  }
+  .DiemDen{
+    position: absolute;
+    top: 0px;
+    left: 370px;
+    margin: 20px;
+    font-size: 24px;
+  }
+  .NgayDi{
+    position: absolute;
+    top: 0px;
+    left: 680px;
+    margin: 20px;
+    font-size: 24px;
+  }
+  .NgayVe{
+    position: absolute;
+    top: 0px;
+    left: 990px;
+    margin: 20px;
+    font-size: 24px;
+  }
   
   .trang-chu .Go {
     position: absolute;
@@ -344,14 +372,6 @@ img {
     left: 633px;
   }
   
-  .trang-chu .vector {
-    position: absolute;
-    width: 19px;
-    height: 20px;
-    top: 375px;
-    left: 1004px;
-  }
-  
   .trang-chu .person-add-alt {
     position: absolute;
     width: 24px;
@@ -396,7 +416,7 @@ img {
     width: 34px;
     height: 34px;
     top: 368px;
-    left: 353px;
+    left: 343px;
   }
   
   .trang-chu .location-2 {
@@ -404,7 +424,7 @@ img {
     width: 34px;
     height: 34px;
     top: 368px;
-    left: 698px;
+    left: 673px;
   }
   
   .trang-chu .right-arrow {
