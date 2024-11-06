@@ -11,24 +11,55 @@
 <body>
   <div class="ng-k">
     <?php
-    require_once('Config/script.php');      
+    require_once('Config/script.php');
     ?>
     <?php
     if (isset($_POST["register"])) {
+      // Get the user input from the POST request
       $account = $_POST["account"];
       $email = $_POST["email"];
       $pass = $_POST["pass"];
-      $repass = $_POST["repass"];   
-      $randomid = (rand(1,1000000));    
-      $result = mysqli_query($con, "Select * from Account where Username = '$account' or Password = '$pass'");
-      if(mysqli_num_rows($result) > 0){
-        echo "<script> alert('Tên người dùng hoặc mật khẩu đã tồn tại') </script>";
-      }
-      else{
-        if($pass == $repass){
-          $query = "insert into Account values ('$randomid','$account', '$pass','Khach','$randomid','0')";
-          mysqli_query($con, $query);
-          echo "<script> alert('Đăng ký thành công') </script>";    
+      $repass = $_POST["repass"];
+
+      // Validate email format
+      if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        echo "<script> alert('Email không hợp lệ!') </script>";
+      } else {
+        $insertKhachHangQuery = "INSERT INTO KhachHang (Email) VALUES (?)";
+
+        if ($stmtKhachHang = mysqli_prepare($con, $insertKhachHangQuery)) {
+          mysqli_stmt_bind_param($stmtKhachHang, "s", $email);
+
+          if (mysqli_stmt_execute($stmtKhachHang)) {
+            $MaKH = mysqli_insert_id($con);
+            if ($pass == $repass) {
+              $insertAccountQuery = "INSERT INTO Account (Username, Password, Role, MaKH, MaNV) 
+                                             VALUES (?, ?, 'Khach', ?, ?)";
+
+              if ($stmtAccount = mysqli_prepare($con, $insertAccountQuery)) {
+
+                $MaNV = NULL;
+
+                mysqli_stmt_bind_param($stmtAccount, "ssii", $account, $pass, $MaKH, $MaNV);
+
+                if (mysqli_stmt_execute($stmtAccount)) {
+                  echo "<script> alert('Đăng ký thành công!') </script>";
+                } else {
+                  echo "<script> alert('Lỗi khi đăng ký vào Account. Vui lòng thử lại!') </script>";
+                }
+                mysqli_stmt_close($stmtAccount);
+              } else {
+                echo "Error preparing Account insert query: " . mysqli_error($con);
+              }
+            } else {
+              echo "<script> alert('Mật khẩu không khớp') </script>";
+            }
+          } else {
+            echo "<script> alert('Lỗi khi đăng ký vào KhachHang. Vui lòng thử lại!') </script>";
+          }
+          mysqli_stmt_close($stmtKhachHang);
+        } else {
+          echo "Error preparing KhachHang insert query: " . mysqli_error($con);
         }
       }
     }
