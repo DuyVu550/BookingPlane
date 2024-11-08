@@ -1,3 +1,47 @@
+<!-- Button to open the modal -->
+<button id="openModalBtn">Open Filter Form</button>
+
+<!-- The Modal -->
+<div id="filterModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    
+    <!-- Form inside the modal -->
+    <form method="post" action="">
+      <input type="text" name="DiemDen" placeholder="Destination" value="<?php echo isset($diemDen) ? htmlspecialchars($diemDen) : ''; ?>">
+      <input type="text" name="DiemDi" placeholder="Departure" value="<?php echo isset($diemDi) ? htmlspecialchars($diemDi) : ''; ?>">
+      <input type="date" name="Datego" placeholder="Date of Go" value="<?php echo isset($dateGo) ? htmlspecialchars($dateGo) : ''; ?>">
+      <input type="date" name="Dateback" placeholder="Date of Back" value="<?php echo isset($dateBack) ? htmlspecialchars($dateBack) : ''; ?>">
+      <input type="text" name="search" placeholder="Search keyword" value="<?php echo isset($search) ? htmlspecialchars($search) : ''; ?>">
+      <button type="submit">Search</button>
+    </form>
+  </div>
+</div>
+
+<script>
+  // Get modal elements
+  const modal = document.getElementById('filterModal');
+  const openModalBtn = document.getElementById('openModalBtn');
+  const closeModalBtn = document.querySelector('.close');
+
+  // Open modal when button is clicked
+  openModalBtn.onclick = function() {
+    modal.style.display = 'block';
+  }
+
+  // Close modal when 'x' is clicked
+  closeModalBtn.onclick = function() {
+    modal.style.display = 'none';
+  }
+
+  // Close modal when clicking outside the modal content
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = 'none';
+    }
+  }
+</script>
+
 <?php
 require_once('Config/script.php');
 
@@ -7,45 +51,51 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $diemDi = isset($_POST['DiemDi']) ? htmlspecialchars($_POST['DiemDi']) : '';
   $dateGo = isset($_POST['Datego']) ? htmlspecialchars($_POST['Datego']) : '';
   $dateBack = isset($_POST['Dateback']) ? htmlspecialchars($_POST['Dateback']) : '';
-} else {
-  header("Location: homePage.PHP");
-  exit();
+  $search = isset($_POST['search']) ? htmlspecialchars($_POST['search']) : '';
+
+  // Call filter function and get results
+  $result = filterBookings($con, $diemDen, $diemDi, $dateGo, $dateBack, $search);
+
+  // Display the filtered results
+
 }
 
-// Prepare the SQL query
-$query = "SELECT * FROM bookplan WHERE 1=1"; 
+// Define the filter function
+function filterBookings($con, $diemDen, $diemDi, $dateGo, $dateBack, $search) {
+  $query = "SELECT * FROM bookplan WHERE 1=1";
+  $params = [];
 
+  if ($diemDen) {
+    $query .= " AND DiemDi = ?";
+    $params[] = $diemDen;
+  }
+  if ($diemDi) {
+    $query .= " AND DiemDen = ?";
+    $params[] = $diemDi;
+  }
+  if ($dateGo) {
+    $query .= " AND KhoiHanh = ?";
+    $params[] = $dateGo;
+  }
+  if ($dateBack) {
+    $query .= " AND NgayVe = ?";
+    $params[] = $dateBack;
+  }
+  // Add search condition
+  if ($search) {
+    $query .= " AND (DiemDi LIKE ? OR DiemDen LIKE ? OR KhoiHanh LIKE ? OR NgayVe LIKE ?)";
+    $params = array_merge($params, array_fill(0, 4, '%' . $search . '%'));
+  }
 
-$params = [];
-if ($diemDen) {
-  $query .= " AND DiemDi = ?";
-  $params[] = $diemDen;
+  $stmt = mysqli_prepare($con, $query);
+  if ($params) {
+    mysqli_stmt_bind_param($stmt, str_repeat('s', count($params)), ...$params);
+  }
+
+  mysqli_stmt_execute($stmt);
+  return mysqli_stmt_get_result($stmt);
 }
-if ($diemDi) {
-  $query .= " AND DiemDen = ?";
-  $params[] = $diemDi;
-}
-if ($dateGo) {
-  $query .= " AND KhoiHanh = ?";
-  $params[] = $dateGo;
-}
-if ($dateBack) {
-  $query .= " AND NgayVe = ?"; 
-  $params[] = $dateBack;
-}
-
-
-$stmt = mysqli_prepare($con, $query);
-
-if ($params) {
-  mysqli_stmt_bind_param($stmt, str_repeat('s', count($params)), ...$params);
-}
-
-
-mysqli_stmt_execute($stmt);
-$result = mysqli_stmt_get_result($stmt);
 ?>
-
 
 <!DOCTYPE html>
 <html>
@@ -174,21 +224,11 @@ $result = mysqli_stmt_get_result($stmt);
             }
             ?>
           </div>
-
-
-
-
-
-
-
           <button class="sort">
             <div class="sort-text">
               <div class="text-wrapper">Hiển thị bộ lọc</div>
             </div>
           </button>
-
-
-
         </div>
       </div>
     </div>
