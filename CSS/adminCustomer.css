@@ -243,12 +243,11 @@
   .qun-l-khch-hng .navbar-2 {
     position: relative;
     width: 1142px;
-    height: 50px;
+    height: 40px;
   }
   
   .qun-l-khch-hng .text-wrapper-8 {
     position: absolute;
-    top: 2px;
     left: 79px;
     font-family: "Poppins-Regular", Helvetica;
     font-weight: 400;
@@ -259,7 +258,6 @@
   }
   
   .qun-l-khch-hng .text-wrapper-9 {
-    top: 2px;
     left: 236px;
     opacity: 0.65;
     font-family: "Poppins-Regular", Helvetica;
@@ -272,7 +270,6 @@
   }
   
   .qun-l-khch-hng .text-wrapper-10 {
-    top: 2px;
     left: 701px;
     position: absolute;
     opacity: 0.65;
@@ -286,7 +283,6 @@
   
   .qun-l-khch-hng .text-wrapper-11 {
     margin-left:5px ;
-    top: 0;
     left: 883px;
     position: absolute;
     opacity: 0.65;
@@ -300,7 +296,6 @@
   
   .qun-l-khch-hng .text-wrapper-12 {
     margin-left: 10px;
-    top: 2px;
     left: 372px;
     opacity: 0.65;
     font-family: "Poppins-Regular", Helvetica;
@@ -312,9 +307,61 @@
     line-height: normal;
   }
   
+  .qun-l-khch-hng .text-wrapper-id {
+    margin-left: 10px;
+    left: 25px;
+    opacity: 0.65;
+    font-family: "Poppins-Regular", Helvetica;
+    font-weight: 400;
+    position: absolute;
+    color: #000000;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: normal;
+    font-weight: bold;
+  }
+
+  
+  .qun-l-khch-hng .text-wrapper-edit {
+    margin-left: 10px;
+    left: 1000px;
+    opacity: 0.65;
+    font-family: "Poppins-Regular", Helvetica;
+    font-weight: 400;
+    position: absolute;
+    color: #000000;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: normal;
+    font-weight: bold;
+    text-decoration: underline;
+  }
+
+  #delete:hover{
+    color:red;
+  }
+
+  .qun-l-khch-hng .text-wrapper-delete {
+    margin-left: 10px;
+    left: 1075px;
+    opacity: 0.65;
+    font-family: "Poppins-Regular", Helvetica;
+    font-weight: 400;
+    position: absolute;
+    color: #000000;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: normal;
+    font-weight: bold;
+    text-decoration: underline;
+  }
+
+  a .text-wrapper-edit{
+    color: red;
+  }
+
   .qun-l-khch-hng .text-wrapper-13 {
-    width: 127px;
-    top: 0;
+    width: 150px;
     left: 529px;
     opacity: 0.65;
     font-family: "Poppins-Regular", Helvetica;
@@ -325,6 +372,7 @@
     letter-spacing: 0;
     line-height: normal;
     overflow-wrap:break-word;
+    word-wrap: break-word;
   }
   
   .qun-l-khch-hng .vector-2 {
@@ -406,7 +454,7 @@
   
   .qun-l-khch-hng .frame-3 {
     display: flex;
-    width: 936px;
+    width: 1270px;
     align-items: center;
     justify-content: space-between;
     position: absolute;
@@ -623,4 +671,17 @@
     letter-spacing: 0;
     line-height: normal;
   }
-  
+
+  .btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited{
+    background-color: rgb(0, 200, 255);
+    border-radius: 10px;
+    padding: 14px 24px;
+    outline: 0 none;
+    cursor: pointer;
+    margin-top: 47.5px;
+    color: #000000;
+}
+
+.group-2{
+    position: relative;    
+}

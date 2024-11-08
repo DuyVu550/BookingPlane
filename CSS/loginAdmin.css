@@ -202,3 +202,10 @@ a:hover{
     background-image: none;
     cursor: pointer;
   }
+.error{
+    background: #F2dede;
+    color:#A94442;
+    padding: 10px;
+    width: 95%;
+    border-radius:5px ;
+}

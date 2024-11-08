@@ -1,8 +1,21 @@
 <?php
 require_once('Config/script.php');
 
+error_reporting(0);
+session_start();	
+if(!isset($_SESSION["Username"]))
+{
+  $_SESSION["Username"]=$username;
+  header("location:loginAdmin.php");
+}
+session_destroy();
 // Fetch locations from the database
+<<<<<<< HEAD
 $query = "SELECT Tinh FROM sanbay";
+=======
+$username=$_POST["Username"];
+$query = "SELECT Tinh FROM sanbay"; 
+>>>>>>> BaoBranch2.0
 $result = mysqli_query($con, $query);
 $locations = [];
 
