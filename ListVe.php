@@ -1,5 +1,5 @@
 <!-- Button to open the modal -->
-<button id="openModalBtn">Open Filter Form</button>
+<button id="openModalBtn" class="openBtn">Open Filter Form</button>
 
 <!-- The Modal -->
 <div id="filterModal" class="modal">
@@ -55,9 +55,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
   // Call filter function and get results
   $result = filterBookings($con, $diemDen, $diemDi, $dateGo, $dateBack, $search);
-
-  // Display the filtered results
-
 }
 
 // Define the filter function
@@ -224,11 +221,6 @@ function filterBookings($con, $diemDen, $diemDi, $dateGo, $dateBack, $search) {
             }
             ?>
           </div>
-          <button class="sort">
-            <div class="sort-text">
-              <div class="text-wrapper">Hiển thị bộ lọc</div>
-            </div>
-          </button>
         </div>
       </div>
     </div>
