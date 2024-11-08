@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Toggleable Bottom Pop-up Form with Background Blur</title>
+  <style>
+    /* Basic reset and styling */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    /* Toggle Button Styling */
+    .toggle-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      font-size: 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+      z-index: 10;
+    }
+
+    /* Background Blur Styling */
+    #overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5); /* Black with opacity */
+      backdrop-filter: blur(5px); /* Apply blur */
+      display: none;
+      z-index: 9;
+    }
+
+    /* Pop-up form styling */
+    #popupForm {
+      position: fixed;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      max-width: 400px;
+      background-color: #f9f9f9;
+      border-top: 2px solid #007bff;
+      box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
+      padding: 20px;
+      display: none;
+      z-index: 11;
+      transition: transform 0.3s ease;
+    }
+
+    #popupForm.active,
+    #overlay.active {
+      display: block;
+    }
+
+    #popupForm h2 {
+      font-size: 1.5rem;
+      color: #007bff;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 0.9rem;
+      color: #555;
+    }
+
+    .form-group input {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+
+    .form-group button {
+      width: 100%;
+      padding: 10px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      font-size: 1.5rem;
+      color: #007bff;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Overlay Background -->
+  <div id="overlay" onclick="togglePopup()"></div>
+
+  <!-- Toggle Button -->
+  <button class="toggle-btn" onclick="togglePopup()">Toggle Form</button>
+
+  <!-- Pop-up form -->
+  <div id="popupForm">
+    <span class="close-btn" onclick="togglePopup()">×</span>
+    <h2>Subscribe to our Newsletter</h2>
+    <form action="#">
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" required>
+      </div>
+      <div class="form-group">
+        <button type="submit">Submit</button>
+      </div>
+    </form>
+  </div>
+
+  <script>
+    // Toggle the visibility of the popup form and overlay
+    function togglePopup() {
+      const popupForm = document.getElementById("popupForm");
+      const overlay = document.getElementById("overlay");
+
+      popupForm.classList.toggle("active");
+      overlay.classList.toggle("active");
+    }
+  </script>
+</body>
+</html>
