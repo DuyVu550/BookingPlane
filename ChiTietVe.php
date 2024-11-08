@@ -1,7 +1,7 @@
 <?php
 require_once('Config/script.php');
 
-$query = "SELECT * FROM booking WHERE MaKH = 1 and TinhTrang = 'Đang đặt' "; 
+$query = "SELECT * FROM booking WHERE MaKH = 1 and TinhTrang = 'Đang đặt' ";
 $result = mysqli_query($con, $query);
 ?>
 <!DOCTYPE html>
@@ -26,7 +26,6 @@ $result = mysqli_query($con, $query);
           <div class="rectangle"></div>
           <div class="div">
             <label class="Ve-text">Vé đã chọn</label>
-            <p class="Sum">Tổng số tiền là: 3.256.000VNĐ</p>
           </div>
           <div class="ng-k-button">
             <div class="overlap-group">
@@ -81,7 +80,6 @@ $result = mysqli_query($con, $query);
                     <div class="flex-container">
                       <div class="row-container">
                         <label class="location"><?php echo $row['TenKH']; ?></label>
-                        <img class="line-5" src="image/Line 5.png" />
                         <label class="date"><?php echo $row['KhoiHanh']; ?></label>
                         <div>
                           <img class="access-time" src="image/access_time.png" />
@@ -90,7 +88,6 @@ $result = mysqli_query($con, $query);
                       </div>
                       <div class="row-container">
                         <label class="location">Mã Máy Bay:<?php echo $row['MaMB']; ?></label>
-                        <img class="line-5" src="image/Line 5.png" />
                         <label class="date"><?php echo $row['KhoiHanh']; ?></label>
                         <div>
                           <img class="access-time" src="image/access_time.png" />
@@ -112,10 +109,60 @@ $result = mysqli_query($con, $query);
               echo '<div class="text-wrapper-23">Chọn ngày khác</div>';
             }
             ?>
+            <div class="sum-container">
+              <p class="Sum">Tổng số tiền là: 3.256.000VNĐ</p>
+              <div class="button-container">
+                <button class="btn" id="payBtn">Thanh toán</button>
+                <button class="btn">Hủy</button>
+                <div class="momo-payment" id="momo-payment">
+                  <h3>Thanh toán qua MoMo</h3>
+                  <p>Chọn hình thức thanh toán MoMo để hoàn tất giao dịch.</p>
+                  <button class="btn" id="momoPayBtn">Thanh toán MoMo</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Place the JavaScript code at the bottom of the page -->
+            <script>
+              document.getElementById('payBtn').addEventListener('click', async function() {
+    try {
+        console.log("Initiating MoMo payment...");
+        // Make a POST request to your backend to create the MoMo payment order
+        const response = await fetch('/createPayment.php', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ amount: 3256000 }) // Send the amount or other necessary data
+        });
+
+        // Check if the response was successful (status 200)
+        if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+
+        // Parse the JSON response from the server
+        const data = await response.json();
+        console.log("Response from server:", data);
+
+        // Check if the MoMo payment URL is provided by the server
+        if (data.payUrl) {
+            // Redirect to MoMo's payment page
+            window.location.href = data.payUrl;
+        } else {
+            // Handle error if no payment URL is returned
+            alert('Error initiating MoMo payment: ' + (data.message || "No message provided"));
+        }
+    } catch (error) {
+        console.error('Error initiating MoMo payment:', error);
+        alert('An error occurred while initiating the payment. Please check the console for more details.');
+    }
+});
+            </script>
           </div>
         </div>
       </div>
     </div>
+  </div>
+  </div>
   </div>
 </body>
 

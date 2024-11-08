@@ -20,9 +20,6 @@ h1 {
   font-size: 3rem; /* Responsive heading size */
 }
 
-p {
-  font-size: 1rem; /* Standard paragraph size */
-}
 
 img {
   max-width: 100%; /* Responsive images */
@@ -311,23 +308,123 @@ img {
     font-size: 24px;
   }
   
-  .trang-chu .rectangle-8 {
+  .trang-chu .peoples-select-container {
     position: absolute;
-    width: 272px;
+    width:613px;
     height: 74px;
     top: 173px;
-    left: 383px;
+    left: 53px;
     background-color: #ffffff;
     border-radius: 25px;
     border: 1px solid;
     border-color: #000000;
+    max-width: 613px;
+    cursor: pointer;
+    position: relative; 
+  }
+  h2 {
+    text-align: center;
+  }
+  .Guess-label{
+    position: relative;
+    top: -40px;
+    left: -233px;
+    font-weight: normal;
   }
   
- 
- 
+  .peoples-select-wrapper {
+    background-color: transparent; 
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-top: 10px; 
+    display: none; 
+    position: absolute; 
+    top: 100%; 
+    left: 0;
+    width: 100%;
+    z-index: 9999; 
+  }
   
+  .peoples-select {
+  display: flex; 
+  align-items: center; 
+  justify-content: space-between; 
+  width: 100%; 
+}
 
+.peoples-select label {
+  text-align: center; 
+  margin-bottom: 0; 
+  white-space: nowrap; 
+  min-width: 120px; 
+}
+
+.peoples-select button,
+.peoples-select input {
+  flex: 1; 
+  padding: 5px; 
+  text-align: center; 
+}
+
+.peoples-select button {
+  width: 40px; 
+    height: 40px; 
+    border-radius: 50%; 
+    background-color: #007bff; 
+    color: white; 
+    font-size: 18px;
+    justify-content: center;
+    align-items: center;
+    border: none; 
+    cursor: pointer; 
+    padding: 0;
+}
+
+.peoples-select input {
+  padding: 5px; 
+  font-size: 16px;
+  width: 40px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.peoples-select input[type="number"]::-webkit-outer-spin-button,
+.peoples-select input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;  /* Removes the arrows */
+    margin: 0;  /* Remove any default margin */
+}
+  .peoples-select-display {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+  }
   
+  .peoples-select-display span {
+    color: #007bff;
+  }
+
+  .peoples-select select {
+    display: none;
+  }
+  .peoples-select-container.active .peoples-select-wrapper {
+    background-color: #fff;
+    display: block; 
+  }
+  
+  .peoples-select-container.active .peoples-select select {
+    display: block;
+  }
+  
+  .peoples-select-container.active .peoples-select select {
+    transition: all 0.3s ease;
+  }
+
+ .number-result{
+  font-size: 24px;
+  position: relative ;
+  top:-37px;
+  left: 40px;
+ }
   .trang-chu .text-wrapper-13 {
     position: absolute;
     top: 173px;
@@ -377,7 +474,7 @@ img {
     width: 24px;
     height: 24px;
     top: 493px;
-    left: 706px;
+    left: 346px;
   }
   
 

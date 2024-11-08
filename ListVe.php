@@ -164,7 +164,7 @@ $result = mysqli_stmt_get_result($stmt);
                     <div class="text-wrapper-26">Hạng thường</div>
                     <div class="text-wrapper-21">3.265.000VND</div>
                     <input type="hidden" name="MaCB" value="<?php echo $maCB; ?>" />
-                    <button type="submit" class="rectangle-20">Xem Vé</button>
+                    <button type="submit" class="rectangle-20">Đặt Vé</button>
                   </div>
                 </div>
                 </form>

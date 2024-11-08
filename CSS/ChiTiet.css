@@ -681,6 +681,7 @@ img {
     letter-spacing: 0;
     line-height: normal;
     width: 67%;
+    
   }
 
   .trang-t-v .line-5 {
@@ -748,12 +749,66 @@ img {
     height: 44px;
     top:6px;
   }
-  .Sum{
-    position: absolute;
-    top: 1200px;
-    left:1193px;
-    font-size: 42px;
-    margin-top: 100px;
+  .sum-container {
+    display: flex;
+    justify-content: space-between;  
+    align-items: center; 
+    margin-top: 20px;  
+    width: 1700px; 
+}
+
+.Sum {
+    font-size: 42px;  
     font-weight: bold;
-  }
-  
+    margin-right: auto; 
+}
+
+.button-container {
+    display: flex;
+    gap: 10px;
+    margin-left: 200px;
+}
+
+.btn {
+    font-size: 42px; 
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+.momo-payment {
+  display: none; /* Hide it initially */
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.momo-payment h3 {
+  font-size: 42px;
+  color: #007bff;
+}
+
+.momo-payment button {
+  background-color: #007bff;
+  color: white;
+  font-size: 42px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.momo-payment button:hover {
+  background-color: #0056b3;
+}

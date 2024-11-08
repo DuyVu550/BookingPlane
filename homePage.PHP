@@ -1,15 +1,15 @@
 <?php
-require_once('Config/script.php'); 
+require_once('Config/script.php');
 
 // Fetch locations from the database
-$query = "SELECT Tinh FROM sanbay"; 
+$query = "SELECT Tinh FROM sanbay";
 $result = mysqli_query($con, $query);
 $locations = [];
 
 if ($result) {
-    while ($row = mysqli_fetch_assoc($result)) {
-        $locations[] = $row['Tinh'];
-    }
+  while ($row = mysqli_fetch_assoc($result)) {
+    $locations[] = $row['Tinh'];
+  }
 }
 ?>
 <!DOCTYPE html>
@@ -27,7 +27,7 @@ if ($result) {
       <div class="overlap">
         <img class="image" src="image/image.png" />
         <div class="rectangle"></div>
-        <div class="div" ></div>
+        <div class="div"></div>
         <div class="ng-k-button">
           <div class="overlap-group">
             <div class="text-wrapper">Đăng ký</div>
@@ -50,48 +50,82 @@ if ($result) {
         <form class="Search-Form" action="ListVe.php" method="POST">
           <label for="DiemDi" class="DiemDi">Điểm đi:</label>
           <select class="Go" name="DiemDen" id="DiemDen" required>
-        <option value="">Chọn điểm đến</option>
-        <?php foreach ($locations as $location) : ?>
-            <option value="<?php echo htmlspecialchars($location); ?>"><?php echo htmlspecialchars($location); ?></option>
-        <?php endforeach; ?>
-    </select>
+            <option value="">Chọn điểm đến</option>
+            <?php foreach ($locations as $location) : ?>
+              <option value="<?php echo htmlspecialchars($location); ?>"><?php echo htmlspecialchars($location); ?></option>
+            <?php endforeach; ?>
+          </select>
 
-    <label for="DiemDen" class="DiemDen">Điểm đến:</label>
-    <select class="Back" name="DiemDi" id="DiemDi" required>
-        <option value="">Chọn điểm đi</option>
-        <?php foreach ($locations as $location) : ?>
-            <option value="<?php echo htmlspecialchars($location); ?>"><?php echo htmlspecialchars($location); ?></option>
-        <?php endforeach; ?>
-    </select>
-      
+          <label for="DiemDen" class="DiemDen">Điểm đến:</label>
+          <select class="Back" name="DiemDi" id="DiemDi" required>
+            <option value="">Chọn điểm đi</option>
+            <?php foreach ($locations as $location) : ?>
+              <option value="<?php echo htmlspecialchars($location); ?>"><?php echo htmlspecialchars($location); ?></option>
+            <?php endforeach; ?>
+          </select>
+
           <label for="Datego" class="NgayDi">Ngày đi:</label>
           <input type="date" id="dateGo" class="Datego" name="Datego" id="Datego" required>
-      
+
           <label for="Dateback" class="NgayVe">Ngày về:</label>
           <input type="date" id="dateBack" class="Dateback" name="Dateback" id="Dateback" disabled>
-      
-          <div class="rectangle-8"></div>
+
+          <div class="peoples-select-container" id="peoples-select-container">
+            <h2 class="Guess-label">Hành Khách</h2>
+
+            <div class="peoples-select-display">
+              <p class="number-result"><strong>Số lượng:</strong> <span id="value-display">Trẻ em: 0, Người lớn: 0, Người già: 0</span></p>
+            </div>
+
+            <div class="peoples-select-wrapper">
+              <!-- Trẻ em -->
+              <div class="peoples-select" id="young-select">
+                <label for="young">Trẻ em:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                <button type="button" class="decrease" id="decrease-young">-</button>
+                <input type="number" id="young" name="young" value="0" min="0" />
+                <button type="button" class="increase" id="increase-young">+</button>
+              </div>
+
+              <!-- Người lớn -->
+              <div class="peoples-select" id="middle-select">
+                <label for="middle">Người lớn:</label>
+                <button type="button" class="decrease" id="decrease-middle">-</button>
+                <input type="number" id="middle" name="middle" value="0" min="0" />
+                <button type="button" class="increase" id="increase-middle">+</button>
+              </div>
+
+              <!-- Người già -->
+              <div class="peoples-select" id="old-select">
+                <label for="old">Người già:</label>
+                <button type="button" class="decrease" id="decrease-old">-</button>
+                <input type="number" id="old" name="old" value="0" min="0" />
+                <button type="button" class="increase" id="increase-old">+</button>
+              </div>
+            </div>
+          </div>
+
+          <script src="Config/Count.js"></script>
           <div class="text-wrapper-13">Một chiều</div>
           <div class="text-wrapper-14">Khứ hồi</div>
           <div class="text-wrapper-15">Ngày về</div>
           <button type="submit" class="rectangle-2">
-          <div class="text-wrapper-4">Đặt vé ngay !</div>
-        </button>   
+            <div class="text-wrapper-4">Đặt vé ngay !</div>
+          </button>
         </form>
         <script>
-    document.getElementById('dateGo').addEventListener('change', function() {
-        const departureDate = this.value;
-        const returnDateInput = document.getElementById('dateBack');
+          document.getElementById('dateGo').addEventListener('change', function() {
+            const departureDate = this.value;
+            const returnDateInput = document.getElementById('dateBack');
 
-        if (departureDate) {
-            returnDateInput.disabled = false;
+            if (departureDate) {
+              returnDateInput.disabled = false;
 
-            returnDateInput.min = new Date(departureDate).toISOString().split("T")[0];
-        } else {
-            returnDateInput.disabled = true;
-        }
-    });
-</script>
+              returnDateInput.min = new Date(departureDate).toISOString().split("T")[0];
+            } else {
+              returnDateInput.disabled = true;
+            }
+          });
+        </script>
 
         <img class="left-arrow" src="image/Left Arrow.png" />
         <img class="person-add-alt" src="image/Person add alt 1.png" />
