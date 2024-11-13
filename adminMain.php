@@ -1,8 +1,10 @@
 <?php
+require_once('Config/script.php'); 
 error_reporting(0);
 session_start();	
 if(!isset($_SESSION["Username"]))
 {
+  echo "Welcome ".$_SESSION['Username']; 
   header("location:loginAdmin.php");
 }
 session_destroy();
@@ -23,7 +25,12 @@ session_destroy();
           <div class="rectangle-2"></div>
           <div class="text-wrapper-logout"><a href="logout.php">Đăng xuất</div></a>
           <img class="profile-avtar" src="image/Profile.png" />
-          <div class="sales-info-search"><div class="text-wrapper">Chào mừng Admin</div></div>
+          <?php
+          $select="SELECT * FROM account";
+          $query=mysqli_query($con,$select);
+          $result=mysqli_fetch_assoc($query);
+          ?>
+          <div class="sales-info-search"><div class="text-wrapper">Chào mừng <?php echo $result['Username'];?></div></div>
           <?php if(isset($_GET['error'])){?>
           <p class="error"><?php echo $_GET['error']; ?></p>
         <?php }
@@ -123,7 +130,7 @@ session_destroy();
                 <img class="img-2" src="image/menu.png" />
               </div>
               <div class="group-20">
-                <div class="text-wrapper-16"><a href="adminCustomer.html" >Khách hàng</div></a>
+                <div class="text-wrapper-16"><a href="adminCustomer.php" >Khách hàng</div></a>
                 <img class="img-2" src="image/face.png" />
               </div>
               <div class="group-21">
