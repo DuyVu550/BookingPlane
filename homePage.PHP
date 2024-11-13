@@ -6,16 +6,12 @@ session_start();
 if(!isset($_SESSION["Username"]))
 {
   $_SESSION["Username"]=$username;
-  header("location:loginAdmin.php");
+  header("location:loginCus.php");
 }
 session_destroy();
 // Fetch locations from the database
-<<<<<<< HEAD
-$query = "SELECT Tinh FROM sanbay";
-=======
 $username=$_POST["Username"];
-$query = "SELECT Tinh FROM sanbay"; 
->>>>>>> BaoBranch2.0
+$query = "SELECT Tinh FROM sanbay";
 $result = mysqli_query($con, $query);
 $locations = [];
 
