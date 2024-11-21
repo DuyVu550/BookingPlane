@@ -1,14 +1,12 @@
 <?php
 require_once('Config/script.php'); 
-error_reporting(0);
 session_start();	
 if(!isset($_SESSION["Username"]))
 {
-  echo "Welcome ".$_SESSION['Username']; 
   header("location:loginAdmin.php");
 }
-session_destroy();
 ?>
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -134,19 +132,19 @@ session_destroy();
                 <img class="img-2" src="image/face.png" />
               </div>
               <div class="group-21">
-                <div class="text-wrapper-17"><a href="adminTicket.html">Quản lý vé</div></a>
+                <div class="text-wrapper-17"><a href="adminTicket.php">Quản lý vé</div></a>
                 <img class="img-2" src="image/board.png" />
               </div>
               <div class="group-22">
-                <div class="text-wrapper-18"><a href="adminPlane.html"> Chuyến bay</div></a>
+                <div class="text-wrapper-18"><a href="adminPlane.php"> Chuyến bay</div></a>
                 <img class="img-3" src="image/Plane.png" />
               </div>
               <div class="group-24">
-                <div class="text-wrapper-17"><a href="adminEmploye.html"> Nhân viên</div></a>
+                <div class="text-wrapper-17"><a href="adminEmploye.php"> Nhân viên</div></a>
                 <img class="img-2" src="image/person.png" />
               </div>
               <div class="group-25">
-                <div class="text-wrapper-19"><a href="adminAcc.html">Tài khoản</div></a> 
+                <div class="text-wrapper-19"><a href="adminAcc.php">Tài khoản</div></a> 
                 <div class="empty-wallet"></div>
                 <img class="empty-wallet" src="image/empty-wallet.png" />
               </div>

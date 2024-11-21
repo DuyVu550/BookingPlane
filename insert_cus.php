@@ -15,6 +15,7 @@ if(isset($_POST['submit'])){
     $result=mysqli_query($con,$sql);
     if($result){
         echo "Thêm khách hàng thành công";
+        header('location:adminCustomer.php');
     }else{
         die(mysqli_error($con));
     }
@@ -35,6 +36,9 @@ if(isset($_POST['submit'])){
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
 
     <title>Thêm khách hàng</title>
+    <style> body{
+      background-color: gainsboro;
+    } </style>
   </head>
   <body>
     <div class="container my-5">
