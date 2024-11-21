@@ -8,7 +8,6 @@ if(!isset($_SESSION["Username"]))
   $_SESSION["Username"]=$username;
   header("location:loginCus.php");
 }
-session_destroy();
 // Fetch locations from the database
 $username=$_POST["Username"];
 $query = "SELECT Tinh FROM sanbay";

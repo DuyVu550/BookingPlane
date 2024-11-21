@@ -1,3 +1,46 @@
+<!-- Button to open the modal -->
+<button id="openModalBtn" class="openBtn">Open Filter Form</button>
+
+<!-- The Modal -->
+<div id="filterModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    
+    <!-- Form inside the modal -->
+    <form method="post" action="">
+      <input type="text" name="DiemDen" placeholder="Destination" value="<?php echo isset($diemDen) ? htmlspecialchars($diemDen) : ''; ?>">
+      <input type="text" name="DiemDi" placeholder="Departure" value="<?php echo isset($diemDi) ? htmlspecialchars($diemDi) : ''; ?>">
+      <input type="date" name="Datego" placeholder="Date of Go" value="<?php echo isset($dateGo) ? htmlspecialchars($dateGo) : ''; ?>">
+      <input type="date" name="Dateback" placeholder="Date of Back" value="<?php echo isset($dateBack) ? htmlspecialchars($dateBack) : ''; ?>">
+      <input type="text" name="search" placeholder="Search keyword" value="<?php echo isset($search) ? htmlspecialchars($search) : ''; ?>">
+      <button type="submit">Search</button>
+    </form>
+  </div>
+</div>
+
+<script>
+  // Get modal elements
+  const modal = document.getElementById('filterModal');
+  const openModalBtn = document.getElementById('openModalBtn');
+  const closeModalBtn = document.querySelector('.close');
+
+  // Open modal when button is clicked
+  openModalBtn.onclick = function() {
+    modal.style.display = 'block';
+  }
+
+  // Close modal when 'x' is clicked
+  closeModalBtn.onclick = function() {
+    modal.style.display = 'none';
+  }
+
+  // Close modal when clicking outside the modal content
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = 'none';
+    }
+  }
+</script>
 <?php
 require_once('Config/script.php');
 

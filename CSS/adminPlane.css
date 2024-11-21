@@ -13,7 +13,18 @@
     height: 858px;
     position: relative;
   }
-  
+  .qun-l-khch-hng .text-wrapper-logout{
+    position: absolute;
+    width: 132px;
+    top: 63px;
+    left: 1000px;
+    font-family: "Kodchasan-Medium", Helvetica;
+    font-weight: 500;
+    color: #000000;
+    font-size: 20px;
+    letter-spacing: 0.16px;
+    line-height: 24px;
+}
   .qun-l-khch-hng .overlap {
     width: 1503px;
     height: 1164px;
@@ -52,13 +63,51 @@
     width: 111px;
     height: 97px;
     top: 16px;
-    left: 1327px;
+    left: 1125px;
     object-fit: cover;
   }
   
+  .qun-l-khch-hng .text-wrapper-edit {
+    margin-left: 10px;
+    left: 1000px;
+    opacity: 0.65;
+    font-family: "Poppins-Regular", Helvetica;
+    font-weight: 400;
+    position: absolute;
+    color: #000000;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: normal;
+    font-weight: bold;
+    text-decoration: underline;
+  }
+
+  #delete:hover{
+    color:red;
+  }
+
+  .qun-l-khch-hng .text-wrapper-delete {
+    margin-left: 10px;
+    left: 1075px;
+    opacity: 0.65;
+    font-family: "Poppins-Regular", Helvetica;
+    font-weight: 400;
+    position: absolute;
+    color: #000000;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: normal;
+    font-weight: bold;
+    text-decoration: underline;
+  }
+
+  a .text-wrapper-edit{
+    color: red;
+  }
+
   .qun-l-khch-hng .sales-info-search {
     position: absolute;
-    width: 233px;
+    width: 400px;
     height: 36px;
     top: 64px;
     left: 40px;

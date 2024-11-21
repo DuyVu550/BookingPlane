@@ -1,3 +1,11 @@
+<?php
+require_once('Config/script.php'); 
+session_start();
+if(!isset($_SESSION["Username"]))
+{
+  header("location:loginAdmin.php");
+}
+?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -12,8 +20,16 @@
         <div class="overlap">
           <img class="rectangle" src="image/Rectangle 6648.png" />
           <div class="rectangle-2"></div>
+          <div class="text-wrapper-logout"><a href="logout.php">Đăng xuất</div></a>
           <img class="profile-avtar" src="image/Profile.png" />
-          <div class="sales-info-search"><div class="text-wrapper">Chào mừng Admin</div></div>
+          <?php
+        $select = "SELECT * FROM account";
+        $query = mysqli_query($con, $select);
+        $result = mysqli_fetch_assoc($query);
+        ?>
+        <div class="sales-info-search">
+          <div class="text-wrapper">Chào mừng <?php echo $result['Username']; ?></div>
+        </div>
           <div class="rectangle-3"></div>
           <div class="table">
             <div class="frame">
@@ -26,19 +42,37 @@
                   <div class="text-wrapper-6">Sân bay cập bến</div>
                 </div>
                 <div class="text-wrapper-7">Thời gian khởi hành</div>
-                <div class="text-wrapper-giatb">Thời gian cất cánh</div>
                 <img class="minus-square" src="image/minus-square.png" />
               </div>
-              <div class="navbar-2">
-                <div class="text-wrapper-8">VN012</div>
-                <div class="text-wrapper-9">NM038</div>
-                <div class="text-wrapper-10">HAN</div>
-                <div class="text-wrapper-11">05:00</div>
-                <div class="text-wrapper-12">24/09/2024</div>
-                <div class="text-wrapper-13">SGN</div>
-                <div class="text-wrapper-fly">07:00</div>
-                <img class="minus-square" src="image/minus-square.png" />
-              </div>
+              <?php
+            $sql = "SELECT * from chuyenbay JOIN sanbay ON chuyenbay.MaSB1=sanbay.MaSB";
+            $result = mysqli_query($con, $sql);
+            if ($result) {
+              while ($row = mysqli_fetch_assoc($result)) {
+                $id = $row['MaChuyenBay'];
+                $maybay = $row['MaMB'];
+                $date = $row['KhoiHanh'];
+                $time = $row['ThoiGian'];
+                $san1 = $row['MaSB1'];
+                $san2 = $row['MaSB2'];
+
+            ?>
+            
+                <div class="navbar-2">
+                  <div class="text-wrapper-8"><?php echo $row['MaChuyenBay']; ?></div>
+                  <div class="text-wrapper-9"><?php echo $row['MaMB']; ?></div>
+                  <div class="text-wrapper-10"><?php echo $row['MaSB2']; ?></div>
+                  <div class="text-wrapper-11"><?php echo $row['ThoiGian']; ?></div>
+                  <div class="text-wrapper-12"><?php echo $row['KhoiHanh']; ?></div>
+                  <div class="text-wrapper-13"><?php echo $row['MaSB1']; ?></div>
+                  <div class="text-wrapper-edit"><a href="edit_plane.php?updateid=<?php echo $row['MaChuyenBay']; ?>">Sửa</a></div>
+                  <div class="text-wrapper-delete"><a href="delete_plane.php?deleteid=<?php echo htmlspecialchars($row['MaChuyenBay'], ENT_QUOTES, 'UTF-8'); ?>" onclick="return confirm('Bạn có chắc chắn muốn xóa?');">Xóa</a>
+                  </div>             
+                </div>
+                <?php
+              }
+            }
+    ?>
             </div>
           </div>
           <div class="frame-2">
@@ -68,36 +102,32 @@
               <button class="button"><input type="text" ></button>
               <div class="text-wrapper-15">Thời gian khởi hành</div>
             </div>
-            <div class="group-2">
-              <button class="button"><input type="text"></button>
-              <div class="text-wrapper-15">Thời gian cất cánh </div>
-            </div>
           </div>
         </div>
         <div class="overlap-2">
           <div class="active"></div>
           <div class="sidebar">
             <div class="frame-4">
-              <div class="text-wrapper-16"> <a href="adminMain.html"> Trang chủ</div></a>
+              <div class="text-wrapper-16"> <a href="adminMain.php"> Trang chủ</div></a>
               <img class="img-2" src="image/element-3.png" />
               <div class="group-3">
-                <div class="text-wrapper-17"> <a href="adminCustomer.html">Khách hàng</div></a>
+                <div class="text-wrapper-17"> <a href="adminCustomer.php">Khách hàng</div></a>
                 <img class="img-2" src="image/face.png" />
               </div>
               <div class="group-4">
-                <div class="text-wrapper-18"><a href="adminTicket.html">Quản lý vé</div></a>
+                <div class="text-wrapper-18"><a href="adminTicket.php">Quản lý vé</div></a>
                 <img class="img-2" src="image/board.png" />
               </div>
               <div class="group-5">
-                <div class="text-wrapper-19"><a-main href="adminPlane.html">Chuyến bay</div></a>
+                <div class="text-wrapper-19"><a-main href="adminPlane.php">Chuyến bay</div></a>
                 <img class="group-6" src="image/Group.png" />
               </div>
               <div class="group-7">
-                <div class="text-wrapper-18"><a href="adminEmploye.html"> Nhân viên</div></a>
+                <div class="text-wrapper-18"><a href="adminEmploye.php"> Nhân viên</div></a>
                 <img class="img-2" src="image/person.png" />
               </div>
               <div class="group-8">
-                <div class="text-wrapper-20"><a href="adminAcc.html"> Tài khoản</div></a>
+                <div class="text-wrapper-20"><a href="adminAcc.php"> Tài khoản</div></a>
                 <img class="img-2" src="image/empty-wallet.png" />
               </div>
               <div class="group-9">
